@@ -27,7 +27,8 @@ allprojects {
                 core      : 'androidx.core:core-ktx:1.7.0',
                 appcompat : 'androidx.appcompat:appcompat:1.5.1',
                 material  : 'com.google.android.material:material:1.6.1',
-                constraint: 'androidx.constraintlayout:constraintlayout:2.1.4'
+                constraint: 'androidx.constraintlayout:constraintlayout:2.1.4',
+                splash: 'androidx.core:core-splashscreen:1.0.0-beta02'
         ]
 
         testLibs = [
