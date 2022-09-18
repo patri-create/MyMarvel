@@ -20,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="350dp"
             android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/roundedCornersImageView"
             app:loadImage="@{item}"
             app:srcCompat="@drawable/image_spiderman_placeholder" />
 
