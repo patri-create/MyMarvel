@@ -5,8 +5,16 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.PagerSnapHelper
+import androidx.recyclerview.widget.RecyclerView
+import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat
+import androidx.viewpager.widget.PagerAdapter
 import com.project.mymarvel.R
 import com.project.mymarvel.databinding.FragmentHomeBinding
+import com.project.mymarvel.domain.Event
 import com.project.mymarvel.domain.Hero
 
 class HomeFragment : Fragment() {
@@ -32,9 +40,9 @@ class HomeFragment : Fragment() {
     }
 
     private fun instances() {
-        val recycler = binding.recycler
-        recycler.addItemDecoration(MarginItemDecoration(resources.getDimensionPixelSize(R.dimen.margin)))
-        recycler.adapter = HomeAdapter(
+        val mainRecycler = binding.mainRecycler
+        mainRecycler.addItemDecoration(MarginItemDecoration(resources.getDimensionPixelSize(R.dimen.margin)))
+        mainRecycler.adapter = HomeAdapter(
             listOf(
                 Hero(
                     "https://media.vandalsports.com/i/640x360/4-2021/2021427125442_1.jpg",
@@ -46,6 +54,24 @@ class HomeFragment : Fragment() {
                 )
             )
         )
+
+        val eventRecycler = binding.eventRecycler
+        eventRecycler.addItemDecoration(MarginItemDecoration(resources.getDimensionPixelSize(R.dimen.margin)))
+        eventRecycler.adapter = EventAdapter(
+            listOf(
+                Event(
+                    "https://i0.wp.com/imgs.hipertextual.com/wp-content/uploads/2022/07/comic-con.png?fit=2304%2C1408&quality=50&strip=all&ssl=1",
+                    "Comic con!",
+                    "The SAN DIEGO COMIC CONVENTION (Comic-Con International) is a California Nonprofit Public Benefit Corporation organized for charitable purposes and dedicated to creating the general public’s awareness"
+                ),
+                Event(
+                    "https://i0.wp.com/www.habkorea.net/wp-content/uploads/2019/04/Official-Lightstick-of-Avengers.jpg?resize=800%2C1000&ssl=1",
+                    "Avengers: Concert theme",
+                    "s going to snap its fingers and half the world will disappear – into the cinema for three hours and two minutes of their lives. The movie is set to be released in Korean theaters on April 24, 2019."
+                )
+            )
+        )
+        binding.indicator.attachToRecyclerView(eventRecycler)
     }
 
 }
