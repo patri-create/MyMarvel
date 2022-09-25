@@ -14,9 +14,17 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <!-- Splash theme. -->
     <style name="SplashTheme" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">@color/white</item>
         <item name="windowSplashScreenAnimatedIcon">@mipmap/ic_marvel_logo_round</item>
         <item name="postSplashScreenTheme">@style/AppTheme</item>
     </style>
+
+    <!-- Shapeable image theme. -->
+    <style name="roundedCornersImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
 </resources>
