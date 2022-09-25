@@ -14,7 +14,8 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.project.mymarvel.R
 import com.project.mymarvel.databinding.LayoutToolbarBinding
 
-class Toolbar constructor(context: Context, attrs: AttributeSet? = null, defStyle: Int = 0) : RelativeLayout(context, attrs, defStyle) {
+class Toolbar @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyle: Int = 0) :
+    RelativeLayout(context, attrs, defStyle) {
 
     private var binding: LayoutToolbarBinding = LayoutToolbarBinding.inflate(
         LayoutInflater.from(context), this, false
@@ -22,9 +23,5 @@ class Toolbar constructor(context: Context, attrs: AttributeSet? = null, defStyl
 
     init {
         addView(binding.root)
-        actions()
     }
-
-    private fun actions() {}
-
 }

@@ -64,5 +64,6 @@ android {
 dependencies {
     implementation androidLibs.values()
     implementation navigationLibs.values()
+    kapt glideKapt.values()
     implementation testLibs.values()
 }

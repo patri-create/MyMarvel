@@ -38,6 +38,10 @@ allprojects {
                 dots_indicator       : "ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:1.2.3"
         ]
 
+        glideKapt = [
+                kapt: 'com.github.bumptech.glide:compiler:4.13.2'
+        ]
+
         navigationLibs = [
                 nav_fragment: "androidx.navigation:navigation-fragment-ktx:$nav_version",
                 nav_ui      : "androidx.navigation:navigation-ui-ktx:$nav_version"

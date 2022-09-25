@@ -4,6 +4,9 @@ import android.os.Bundle
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
+import androidx.navigation.ui.setupActionBarWithNavController
 import com.project.mymarvel.R
 import com.project.mymarvel.common.base.BaseActivity
 import com.project.mymarvel.databinding.ActivityMainBinding
@@ -12,13 +15,14 @@ class MainActivity : BaseActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
+    private lateinit var appBarConfiguration: AppBarConfiguration
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         showSplash()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        configureNavigation()
+        configurations()
         navigateToHomeFragment()
     }
 
@@ -27,12 +31,26 @@ class MainActivity : BaseActivity() {
         installSplashScreen()
     }
 
+    private fun configurations() {
+        configureNavigation()
+        configureAppBar()
+    }
+
     private fun configureNavigation() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
     }
 
+    private fun configureAppBar() {
+        appBarConfiguration = AppBarConfiguration(navController.graph)
+        setupActionBarWithNavController(navController, appBarConfiguration)
+    }
+
     private fun navigateToHomeFragment() {
         navController.navigate(R.id.nav_home)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
 }
