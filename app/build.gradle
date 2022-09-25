@@ -63,5 +63,6 @@ android {
 
 dependencies {
     implementation androidLibs.values()
+    implementation navigationLibs.values()
     implementation testLibs.values()
 }
