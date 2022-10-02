@@ -7,6 +7,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import androidx.navigation.ui.setupWithNavController
 import com.project.mymarvel.R
 import com.project.mymarvel.common.base.BaseActivity
 import com.project.mymarvel.databinding.ActivityMainBinding
@@ -42,12 +43,14 @@ class MainActivity : BaseActivity() {
     }
 
     private fun configureAppBar() {
-        appBarConfiguration = AppBarConfiguration(navController.graph)
+        setSupportActionBar(binding.toolbar.toolbar)
+        appBarConfiguration = AppBarConfiguration(navController.graph, binding.drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
+        binding.navView.setupWithNavController(navController)
     }
 
     private fun navigateToHomeFragment() {
-        navController.navigate(R.id.nav_home)
+        navController.navigate(R.id.home_dest)
     }
 
     override fun onSupportNavigateUp(): Boolean {
