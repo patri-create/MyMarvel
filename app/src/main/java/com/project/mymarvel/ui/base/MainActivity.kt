@@ -24,7 +24,6 @@ class MainActivity : BaseActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         configurations()
-        navigateToHomeFragment()
     }
 
     private fun showSplash() {
@@ -44,13 +43,13 @@ class MainActivity : BaseActivity() {
 
     private fun configureAppBar() {
         setSupportActionBar(binding.toolbar.toolbar)
-        appBarConfiguration = AppBarConfiguration(navController.graph, binding.drawerLayout)
+        appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.home_dest
+            ), binding.drawerLayout
+        )
         setupActionBarWithNavController(navController, appBarConfiguration)
         binding.navView.setupWithNavController(navController)
-    }
-
-    private fun navigateToHomeFragment() {
-        navController.navigate(R.id.home_dest)
     }
 
     override fun onSupportNavigateUp(): Boolean {

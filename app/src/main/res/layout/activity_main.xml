@@ -35,6 +35,10 @@
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:fitsSystemWindows="true" />
+        android:fitsSystemWindows="true"
+        android:background="@color/primaryColor"
+        app:itemIconTint="@color/secondaryColor"
+        app:itemTextColor="@color/secondaryColor"
+        app:menu="@menu/activity_main_drawer_menu"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -14,7 +14,7 @@
         app:contentInsetLeft="0dp"
         app:contentInsetStart="0dp"
         app:contentInsetStartWithNavigation="0dp"
-        app:navigationIcon="@drawable/ic_hambuger_icon"
+        app:navigationIcon="@drawable/ic_hambuger"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
         <TextView
