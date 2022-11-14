@@ -1,6 +1,9 @@
 import com.project.mymarvel.buildsrc.Libs
 
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+apply plugin: "com.github.ben-manes.versions"
+
 buildscript {
     ext {
         nav_version = '2.5.2'
@@ -9,11 +12,13 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        gradlePluginPortal()
     }
 
     dependencies {
         classpath Libs.androidGradlePlugin
         classpath Libs.Kotlin.gradlePlugin
+        classpath Libs.gradleVersionsPlugin
     }
 }
 
@@ -57,6 +62,19 @@ allprojects {
     }
 }
 
+
+// Taken from https://github.com/ben-manes/gradle-versions-plugin
+def isNonStable = { String version ->
+    def stableKeyword = ['RELEASE', 'FINAL', 'GA'].any { it -> version.toUpperCase().contains(it) }
+    def regex = /^[0-9,.v-]+(-r)?$/
+    return !stableKeyword && !(version ==~ regex)
+}
+
+tasks.named("dependencyUpdates").configure {
+    rejectVersionIf {
+        isNonStable(it.candidate.version) && !isNonStable(it.currentVersion)
+    }
+}
 
 task clean(type: Delete) {
     delete rootProject.buildDir
