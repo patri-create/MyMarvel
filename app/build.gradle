@@ -1,7 +1,10 @@
+import com.project.mymarvel.buildsrc.Libs
+
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -62,8 +65,38 @@ android {
 }
 
 dependencies {
-    implementation androidLibs.values()
-    implementation navigationLibs.values()
-    kapt glideKapt.values()
-    implementation testLibs.values()
+    /* Modules */
+    implementation project(":data")
+    implementation project(":domain")
+    implementation project(":usecases")
+
+    /* AndroidX */
+    implementation Libs.AndroidX.core
+    implementation Libs.AndroidX.appCompat
+    implementation Libs.AndroidX.material
+    implementation Libs.AndroidX.constraintLayout
+    implementation Libs.AndroidX.splash
+
+    implementation Libs.AndroidX.Navigation.NavigationFragment
+    implementation Libs.AndroidX.Navigation.NavigationUI
+
+    implementation Libs.AndroidX.SwipeLayout.swipe
+
+    implementation Libs.AndroidX.RecycleView.recycleview
+    implementation Libs.AndroidX.RecycleView.recycleviewSelection
+
+    implementation Libs.AndroidX.Drawer.drawer
+
+    /* Glide */
+    implementation Libs.Glide.glide
+    implementation Libs.Glide.compiler
+
+    /* Dots Indicator */
+    implementation Libs.DotsIndicator.dotsIndicator
+
+    /* Test */
+    androidTestImplementation Libs.AndroidX.Test.Ext.junit
+    androidTestImplementation Libs.AndroidX.Test.Espresso.contrib
+    androidTestImplementation Libs.AndroidX.Test.runner
+    androidTestImplementation Libs.AndroidX.Test.rules
 }
