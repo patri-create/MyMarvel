@@ -1,4 +1,4 @@
-package com.project.mymarvel.domain
+package com.project.mymarve.domain
 
 interface EventItem {
     var image: String

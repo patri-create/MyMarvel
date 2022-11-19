@@ -5,17 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import androidx.core.content.ContextCompat
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.PagerSnapHelper
-import androidx.recyclerview.widget.RecyclerView
-import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat
-import androidx.viewpager.widget.PagerAdapter
 import com.project.mymarvel.R
 import com.project.mymarvel.databinding.FragmentHomeBinding
-import com.project.mymarvel.domain.Event
-import com.project.mymarvel.domain.Hero
+import com.project.mymarve.domain.Event
+import com.project.mymarve.domain.Hero
 
 class HomeFragment : Fragment() {
 

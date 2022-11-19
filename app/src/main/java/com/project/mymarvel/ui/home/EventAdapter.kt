@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.project.mymarvel.databinding.ItemEventBinding
-import com.project.mymarvel.domain.EventItem
+import com.project.mymarve.domain.EventItem
 
 class EventAdapter(private val items: List<EventItem>): RecyclerView.Adapter<EventAdapter.ViewHolder>() {
 

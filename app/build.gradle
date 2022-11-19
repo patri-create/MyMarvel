@@ -5,6 +5,7 @@ plugins {
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'androidx.navigation.safeargs.kotlin'
+    id 'dagger.hilt.android.plugin'
 }
 
 android {
@@ -93,6 +94,20 @@ dependencies {
 
     /* Dots Indicator */
     implementation Libs.DotsIndicator.dotsIndicator
+
+    /* OkHttp3 */
+    implementation Libs.OkHttp3.loginInterceptor
+
+    /* Retrofit */
+    implementation Libs.Retrofit.retrofit
+    implementation Libs.Retrofit.converterGson
+
+    /* Arrow */
+    implementation Libs.Arrow.core
+
+    /* Hilt */
+    implementation Libs.Hilt.android
+    kapt Libs.Hilt.compiler
 
     /* Test */
     androidTestImplementation Libs.AndroidX.Test.Ext.junit
