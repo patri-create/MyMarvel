@@ -1,4 +1,4 @@
 package com.project.mymarvel.domain
 
-class Hero(override var image: String, override var title: String) : MarvelItem {
+class Hero(override var name: String, override var image: String) : MarvelItem {
 }

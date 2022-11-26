@@ -9,6 +9,9 @@ plugins {
 dependencies {
     implementation project(":domain")
 
+    /* Kotlin */
+    implementation Libs.Kotlin.Coroutines.core
+
     /* Moshi */
     implementation Libs.Moshi.moshi
     kapt Libs.Moshi.moshiCodegen
@@ -16,6 +19,10 @@ dependencies {
 
     /* Arrow */
     implementation Libs.Arrow.core
+
+    /* JavaX */
+    implementation Libs.JavaX.inject
+
 }
 
 java {

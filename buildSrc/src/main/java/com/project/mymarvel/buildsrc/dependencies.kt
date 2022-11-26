@@ -8,6 +8,11 @@ object Libs {
     object Kotlin {
         private const val version = "1.7.21"
         const val gradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$version"
+
+        object Coroutines {
+            private const val version = "1.6.0"
+            const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
+        }
     }
 
     object AndroidX {
@@ -17,6 +22,17 @@ object Libs {
         const val material = "com.google.android.material:material:1.6.1"
         const val constraintLayout = "androidx.constraintlayout:constraintlayout:2.1.4"
         const val splash = "androidx.core:core-splashscreen:1.0.0"
+
+        object Activity {
+            private const val version = "1.4.0"
+            const val ktx = "androidx.activity:activity-ktx:1.4.0"
+        }
+
+        object Lifecycle {
+            private const val version = "2.4.1"
+            const val viewmodelKtx = "androidx.lifecycle:lifecycle-viewmodel-ktx:$version"
+            const val runtimeKtx = "androidx.lifecycle:lifecycle-runtime-ktx:$version"
+        }
 
         object Navigation {
             private const val version = "2.5.3"
@@ -99,5 +115,9 @@ object Libs {
         const val compiler = "com.google.dagger:hilt-compiler:$version"
         const val gradlePlugin = "com.google.dagger:hilt-android-gradle-plugin:$version"
         const val test = "com.google.dagger:hilt-android-testing:$version"
+    }
+
+    object JavaX {
+        const val inject = "javax.inject:javax.inject:1"
     }
 }

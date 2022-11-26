@@ -14,5 +14,5 @@ data class Character(
     @Json(name = "resourceURI")
     val resourceURI: String,
     @Json(name = "thumbnail")
-    val image: Image
+    val thumbnail: Image
 )

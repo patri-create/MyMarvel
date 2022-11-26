@@ -9,15 +9,14 @@ import com.project.mymarvel.R
 import com.project.mymarvel.databinding.FragmentHomeBinding
 import com.project.mymarvel.domain.Event
 import com.project.mymarvel.domain.Hero
+import com.project.mymarvel.usecases.FindHeroesUseCase
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-class HomeFragment : Fragment() {
+@AndroidEntryPoint
+class HomeFragment: Fragment() {
 
     private lateinit var binding: FragmentHomeBinding
-
-    companion object {
-        @JvmStatic
-        fun newInstance() = HomeFragment()
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,12 +37,12 @@ class HomeFragment : Fragment() {
         mainRecycler.adapter = HomeAdapter(
             listOf(
                 Hero(
-                    "https://media.vandalsports.com/i/640x360/4-2021/2021427125442_1.jpg",
-                    "Capitán"
+                    "Captain",
+                    "https://media.vandalsports.com/i/640x360/4-2021/2021427125442_1.jpg"
                 ),
                 Hero(
+                    "Wanda",
                     "https://static.wikia.nocookie.net/marveldatabase/images/c/c8/Wanda_Maximoff_%28Earth-199999%29_from_Doctor_Strange_in_the_Multiverse_of_Madness_Promo_001.jpg/revision/latest?cb=20220504145159",
-                    "Wanda"
                 )
             )
         )

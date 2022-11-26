@@ -14,14 +14,14 @@ fun String.md5(): String {
     return BigInteger(1, md.digest(toByteArray())).toString(16).padStart(32, '0')
 }
 
-fun Throwable.toError(): Error = when (this) {
-    is IOException -> Error.Connectivity
-    is HttpException -> Error.Server(code())
-    else -> Error.Unknown(message ?: "")
-}
-
 suspend fun <T> tryCall(action: suspend () -> T): Either<Error, T> = try {
     action().right()
 } catch (e: Exception) {
     e.toError().left()
+}
+
+fun Throwable.toError(): Error = when (this) {
+    is IOException -> Error.Connectivity
+    is HttpException -> Error.Server(code())
+    else -> Error.Unknown(message ?: "")
 }

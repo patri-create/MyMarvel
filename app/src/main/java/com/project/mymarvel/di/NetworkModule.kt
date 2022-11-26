@@ -2,6 +2,7 @@ package com.project.mymarvel.di
 
 import android.content.Context
 import com.project.mymarvel.BuildConfig
+import com.project.mymarvel.data.interceptor.NetworkInterceptor
 import com.project.mymarvel.data.server.ApiService
 import dagger.Module
 import dagger.Provides
@@ -29,17 +30,17 @@ object NetworkModule {
     @ApiKeyInterceptorOkHttpClient
     @Singleton
     @Provides
-    fun headerInterceptor(@ApplicationContext context: Context): Interceptor {
-        return headerInterceptor(context)
+    fun networkInterceptor(@ApplicationContext context: Context): Interceptor {
+        return NetworkInterceptor(context)
     }
 
     @Singleton
     @Provides
-    fun providesOkHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor, @ApiKeyInterceptorOkHttpClient headerInterceptor: Interceptor): OkHttpClient =
+    fun providesOkHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor, @ApiKeyInterceptorOkHttpClient networkInterceptor: Interceptor): OkHttpClient =
         OkHttpClient
             .Builder()
             .addInterceptor(httpLoggingInterceptor)
-            .addInterceptor(headerInterceptor)
+            .addInterceptor(networkInterceptor)
             .connectTimeout(60, TimeUnit.SECONDS)
             .writeTimeout(60, TimeUnit.SECONDS)
             .readTimeout(60, TimeUnit.SECONDS)
