@@ -1,4 +1,4 @@
-package com.project.mymarvel.data.responses
+package com.project.mymarvel.data.server.responses
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
@@ -14,5 +14,5 @@ data class Character(
     @Json(name = "resourceURI")
     val resourceURI: String,
     @Json(name = "thumbnail")
-    val thumbnail: Image
+    val image: Image
 )
