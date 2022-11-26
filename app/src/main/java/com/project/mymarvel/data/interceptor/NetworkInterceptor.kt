@@ -1,6 +1,7 @@
 package com.project.mymarvel.data.interceptor
 
 import android.content.Context
+import com.project.mymarvel.BuildConfig
 import com.project.mymarvel.common.utils.md5
 import okhttp3.HttpUrl
 import okhttp3.Interceptor
@@ -21,8 +22,8 @@ class NetworkInterceptor @Inject constructor(private val context: Context): Inte
 
     private fun httpURL(request: Request): HttpUrl {
         val ts = System.currentTimeMillis().toString()
-        val apikey = ""
-        val hash = ""
+        val apikey = BuildConfig.PBKEY
+        val hash = "$ts${BuildConfig.PVKEY}$apikey"
 
         return request.url.newBuilder()
             .addQueryParameter(TS, ts)
