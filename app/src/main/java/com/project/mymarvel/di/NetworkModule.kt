@@ -2,7 +2,7 @@ package com.project.mymarvel.di
 
 import android.content.Context
 import com.project.mymarvel.BuildConfig
-import com.project.mymarvel.data.ApiService
+import com.project.mymarvel.data.server.ApiService
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
