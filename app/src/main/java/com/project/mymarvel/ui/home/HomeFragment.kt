@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.project.mymarvel.R
 import com.project.mymarvel.databinding.FragmentHomeBinding
-import com.project.mymarve.domain.Event
-import com.project.mymarve.domain.Hero
+import com.project.mymarvel.domain.Event
+import com.project.mymarvel.domain.Hero
 
 class HomeFragment : Fragment() {
 

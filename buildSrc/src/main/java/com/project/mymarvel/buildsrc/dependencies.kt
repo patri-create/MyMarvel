@@ -78,7 +78,14 @@ object Libs {
     object Retrofit {
         private const val version = "2.9.0"
         const val retrofit = "com.squareup.retrofit2:retrofit:$version"
-        const val converterGson = "com.squareup.retrofit2:converter-gson:$version"
+        const val converterMoshi = "com.squareup.retrofit2:converter-moshi:$version"
+    }
+
+    object Moshi {
+        private const val version = "1.14.0"
+        const val moshi = "com.squareup.moshi:moshi:$version"
+        const val moshiKotlin = "com.squareup.moshi:moshi-kotlin:$version"
+        const val moshiCodegen = "com.squareup.moshi:moshi-kotlin-codegen:$version"
     }
 
     object Arrow {

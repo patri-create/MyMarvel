@@ -4,6 +4,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
+    id 'org.jetbrains.kotlin.kapt'
     id 'androidx.navigation.safeargs.kotlin'
     id 'dagger.hilt.android.plugin'
 }
@@ -100,7 +101,12 @@ dependencies {
 
     /* Retrofit */
     implementation Libs.Retrofit.retrofit
-    implementation Libs.Retrofit.converterGson
+    implementation Libs.Retrofit.converterMoshi
+
+    /* Moshi */
+    implementation Libs.Moshi.moshi
+    kapt Libs.Moshi.moshiCodegen
+    implementation Libs.Moshi.moshiKotlin
 
     /* Arrow */
     implementation Libs.Arrow.core

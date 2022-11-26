@@ -1,4 +1,4 @@
-package com.project.mymarve.domain
+package com.project.mymarvel.domain
 
 interface MarvelItem {
     var image: String

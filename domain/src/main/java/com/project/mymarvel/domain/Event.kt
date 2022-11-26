@@ -1,4 +1,4 @@
-package com.project.mymarve.domain
+package com.project.mymarvel.domain
 
 class Event(
     override var image: String,
