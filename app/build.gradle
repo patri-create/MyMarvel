@@ -9,6 +9,10 @@ plugins {
     id 'dagger.hilt.android.plugin'
 }
 
+def propertiesFile = rootProject.file("local.properties").newDataInputStream()
+def properties = new Properties()
+properties.load(propertiesFile)
+
 android {
     compileSdk 32
     flavorDimensions 'enviroments'
@@ -30,11 +34,15 @@ android {
                 versionNameSuffix "-dev"
                 applicationIdSuffix '.dev'
 
-                buildConfigField 'String', 'BASE_URL', '"https://"'
+                buildConfigField 'String', 'PBKEY', properties.getProperty("PBKEY")
+                buildConfigField 'String', 'PVKEY', properties.getProperty("PVKEY")
+                buildConfigField 'String', 'BASE_URL', '"https://gateway.marvel.com/"'
             }
 
             pro {
-                buildConfigField 'String', 'BASE_URL', '"https://"'
+                buildConfigField 'String', 'PBKEY', properties.getProperty("PBKEY")
+                buildConfigField 'String', 'PVKEY', properties.getProperty("PVKEY")
+                buildConfigField 'String', 'BASE_URL', '"https://gateway.marvel.com/"'
             }
         }
 
