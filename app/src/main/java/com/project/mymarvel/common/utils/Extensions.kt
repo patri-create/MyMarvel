@@ -1,5 +1,7 @@
 package com.project.mymarvel.common.utils
 
+import android.content.Context
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
@@ -12,6 +14,7 @@ import java.io.IOException
 import java.math.BigInteger
 import java.security.MessageDigest
 import com.project.mymarvel.domain.Error
+import com.project.mymarvel.ui.home.HomeState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
@@ -43,3 +46,7 @@ fun <T> LifecycleOwner.launchAndCollect(
         }
     }
 }
+
+fun Fragment.buildHomeState(
+    context: Context = requireContext()
+) = HomeState(context)

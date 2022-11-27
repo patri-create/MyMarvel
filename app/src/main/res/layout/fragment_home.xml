@@ -10,6 +10,10 @@
         <variable
             name="heroes"
             type="List&lt;Hero>"/>
+
+        <variable
+            name="error"
+            type="String"/>
     </data>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -56,7 +60,6 @@
                     tools:listitem="@layout/item_event" />
 
 
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
@@ -67,6 +70,14 @@
                 android:layout_gravity="center"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/constraint_recyclers" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
+                android:textColor="?attr/colorError"
+                android:text="@{error}"/>
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

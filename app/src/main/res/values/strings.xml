@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">My Marvel</string>
 
-<!--    Drawer menu-->
+    <!--    Drawer menu -->
     <string name="menu_home">Home</string>
+
+    <!--    Errors  -->
+    <string name="error_connectivity">Connectivity error</string>
+    <string name="error_server">Server error</string>
+    <string name="error_unknown">Unknown error</string>
 </resources>

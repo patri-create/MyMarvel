@@ -6,10 +6,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.project.mymarvel.R
-import com.project.mymarvel.domain.Hero
 import com.project.mymarvel.domain.MarvelItem
-import com.project.mymarvel.ui.home.HomeAdapter
-import com.project.mymarvel.ui.home.MarginItemDecoration
+import com.project.mymarvel.ui.home.adapters.HomeAdapter
+import com.project.mymarvel.ui.home.adapters.MarginItemDecoration
 
 @BindingAdapter("loadImage")
 fun AppCompatImageView.loadImage(image: String) {
