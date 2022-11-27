@@ -22,6 +22,7 @@
             android:scaleType="centerCrop"
             app:shapeAppearanceOverlay="@style/roundedCornersImageView"
             app:loadImage="@{item.image}"
+            app:strokeColor="@null"
             app:srcCompat="@drawable/image_spiderman_placeholder" />
 
         <androidx.appcompat.widget.AppCompatTextView

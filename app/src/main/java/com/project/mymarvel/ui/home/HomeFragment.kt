@@ -6,15 +6,15 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.LinearSnapHelper
 import com.project.mymarvel.R
+import com.project.mymarvel.common.utils.attachSnapHelperWithListener
 import com.project.mymarvel.common.utils.buildHomeState
 import com.project.mymarvel.common.utils.launchAndCollect
 import com.project.mymarvel.databinding.FragmentHomeBinding
 import com.project.mymarvel.domain.Event
 import com.project.mymarvel.domain.Hero
-import com.project.mymarvel.ui.home.adapters.EventAdapter
-import com.project.mymarvel.ui.home.adapters.HomeAdapter
-import com.project.mymarvel.ui.home.adapters.MarginItemDecoration
+import com.project.mymarvel.ui.home.adapters.*
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -42,6 +42,7 @@ class HomeFragment: Fragment() {
         placeholders()
         stateHolder()
         observers()
+        listenSnapOnHomeRecyclerView()
     }
 
     private fun stateHolder() {
@@ -53,6 +54,14 @@ class HomeFragment: Fragment() {
             binding.heroes = it.heroes
             binding.error = it.error?.let(homeState::errorToString)
         }
+    }
+
+    private fun listenSnapOnHomeRecyclerView() {
+        binding.mainRecycler.attachSnapHelperWithListener(LinearSnapHelper(), SnapOnScrollListener.Behavior.NOTIFY_ON_SCROLL, object: OnSnapPositionChangeListener {
+            override fun onSnapPositionChange(position: Int) {
+                print(position)
+            }
+        } )
     }
 
     private fun placeholders() {
