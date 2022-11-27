@@ -1,4 +1,4 @@
-package com.project.mymarvel.ui.home
+package com.project.mymarvel.ui.home.adapters
 
 import android.graphics.Rect
 import android.view.View

@@ -5,16 +5,23 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import com.project.mymarvel.R
+import com.project.mymarvel.common.utils.buildHomeState
+import com.project.mymarvel.common.utils.launchAndCollect
 import com.project.mymarvel.databinding.FragmentHomeBinding
 import com.project.mymarvel.domain.Event
 import com.project.mymarvel.domain.Hero
-import com.project.mymarvel.usecases.FindHeroesUseCase
+import com.project.mymarvel.ui.home.adapters.EventAdapter
+import com.project.mymarvel.ui.home.adapters.HomeAdapter
+import com.project.mymarvel.ui.home.adapters.MarginItemDecoration
 import dagger.hilt.android.AndroidEntryPoint
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class HomeFragment: Fragment() {
+
+    private val vm: HomeViewModel by viewModels()
+    private lateinit var homeState: HomeState
 
     private lateinit var binding: FragmentHomeBinding
 
@@ -32,6 +39,23 @@ class HomeFragment: Fragment() {
     }
 
     private fun instances() {
+        placeholders()
+        stateHolder()
+        observers()
+    }
+
+    private fun stateHolder() {
+        homeState = buildHomeState()
+    }
+
+    private fun observers() {
+        viewLifecycleOwner.launchAndCollect(vm.state) {
+            binding.heroes = it.heroes
+            binding.error = it.error?.let(homeState::errorToString)
+        }
+    }
+
+    private fun placeholders() {
         val mainRecycler = binding.mainRecycler
         mainRecycler.addItemDecoration(MarginItemDecoration(resources.getDimensionPixelSize(R.dimen.margin)))
         mainRecycler.adapter = HomeAdapter(
