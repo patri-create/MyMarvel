@@ -6,10 +6,15 @@
     <data>
         <import type="java.util.List"/>
         <import type="com.project.mymarvel.domain.MarvelItem"/>
+        <import type="com.project.mymarvel.domain.EventItem"/>
 
         <variable
             name="items"
             type="List&lt;MarvelItem>"/>
+
+        <variable
+            name="events"
+            type="List&lt;EventItem>"/>
 
         <variable
             name="error"
@@ -57,6 +62,8 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/main_recycler"
+                    app:events="@{events}"
+                    app:indicator="@{indicator}"
                     tools:listitem="@layout/item_event" />
 
 
