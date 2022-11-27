@@ -3,6 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <import type="java.util.List"/>
+        <import type="com.project.mymarvel.domain.Hero"/>
+
+        <variable
+            name="heroes"
+            type="List&lt;Hero>"/>
+    </data>
+
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -31,6 +40,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
+                    app:items="@{heroes}"
                     tools:listitem="@layout/item_marvel" />
 
                 <androidx.recyclerview.widget.RecyclerView

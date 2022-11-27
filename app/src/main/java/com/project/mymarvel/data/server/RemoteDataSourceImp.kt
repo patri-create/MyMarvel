@@ -23,4 +23,4 @@ private fun Character.toDomain(): Hero =
         thumbnail.toDomain()
     )
 
-private fun Image.toDomain(): String = path
+private fun Image.toDomain(): String = "$path.$extension"
