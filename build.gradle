@@ -16,6 +16,7 @@ buildscript {
         classpath Libs.Kotlin.gradlePlugin
         classpath Libs.gradleVersionsPlugin
         classpath Libs.AndroidX.Navigation.gradlePlugin
+        classpath Libs.Hilt.gradlePlugin
     }
 }
 

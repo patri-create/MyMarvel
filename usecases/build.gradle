@@ -1,3 +1,5 @@
+import com.project.mymarvel.buildsrc.Libs
+
 plugins {
     id 'java-library'
     id 'org.jetbrains.kotlin.jvm'
@@ -6,6 +8,12 @@ plugins {
 dependencies {
     implementation project(":domain")
     implementation project(":data")
+
+    /* Arrow */
+    implementation Libs.Arrow.core
+
+    /* JavaX */
+    implementation Libs.JavaX.inject
 }
 
 java {

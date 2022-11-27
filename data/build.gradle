@@ -1,10 +1,28 @@
+import com.project.mymarvel.buildsrc.Libs
+
 plugins {
     id 'java-library'
     id 'org.jetbrains.kotlin.jvm'
+    id 'org.jetbrains.kotlin.kapt'
 }
 
 dependencies {
     implementation project(":domain")
+
+    /* Kotlin */
+    implementation Libs.Kotlin.Coroutines.core
+
+    /* Moshi */
+    implementation Libs.Moshi.moshi
+    kapt Libs.Moshi.moshiCodegen
+    implementation Libs.Moshi.moshiKotlin
+
+    /* Arrow */
+    implementation Libs.Arrow.core
+
+    /* JavaX */
+    implementation Libs.JavaX.inject
+
 }
 
 java {
