@@ -51,7 +51,7 @@ class HomeFragment: Fragment() {
 
     private fun observers() {
         viewLifecycleOwner.launchAndCollect(vm.state) {
-            binding.heroes = it.heroes
+            binding.items = it.items
             binding.error = it.error?.let(homeState::errorToString)
         }
     }

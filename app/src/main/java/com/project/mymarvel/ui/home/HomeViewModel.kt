@@ -10,6 +10,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import com.project.mymarvel.domain.Error
+import com.project.mymarvel.domain.MarvelItem
 import javax.inject.Inject
 
 @HiltViewModel
@@ -29,12 +30,12 @@ class HomeViewModel @Inject constructor(private val findHeroesUseCase: FindHeroe
         _state.value = _state.value.copy(error = error)
     }
 
-    private fun onSuccess(heroes: List<Hero>) {
-        _state.value = _state.value.copy(heroes = heroes)
+    private fun onSuccess(items: List<MarvelItem>) {
+        _state.value = _state.value.copy(items = items)
     }
 
     data class UiState(
-        val heroes: List<Hero>? = null,
+        val items: List<MarvelItem>? = null,
         val error: Error? = null
     )
 }

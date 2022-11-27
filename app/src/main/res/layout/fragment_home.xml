@@ -5,11 +5,11 @@
 
     <data>
         <import type="java.util.List"/>
-        <import type="com.project.mymarvel.domain.Hero"/>
+        <import type="com.project.mymarvel.domain.MarvelItem"/>
 
         <variable
-            name="heroes"
-            type="List&lt;Hero>"/>
+            name="items"
+            type="List&lt;MarvelItem>"/>
 
         <variable
             name="error"
@@ -44,7 +44,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:items="@{heroes}"
+                    app:items="@{items}"
                     tools:listitem="@layout/item_marvel" />
 
                 <androidx.recyclerview.widget.RecyclerView
