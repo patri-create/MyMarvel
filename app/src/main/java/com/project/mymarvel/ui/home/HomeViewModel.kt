@@ -20,7 +20,7 @@ import javax.inject.Inject
 class HomeViewModel @Inject constructor(private val findHeroesUseCase: FindHeroesUseCase, private val findEventsUseCase: FindEventsUseCase):
     ViewModel() {
 
-    var firstTime = true
+    private lateinit var items: List<MarvelItem>
 
     private val _state = MutableStateFlow(UiState())
     val state: StateFlow<UiState> = _state.asStateFlow()
@@ -36,21 +36,19 @@ class HomeViewModel @Inject constructor(private val findHeroesUseCase: FindHeroe
     }
 
     private fun onSuccess(items: List<MarvelItem>) {
+        this.items = items
         _state.value = _state.value.copy(items = items)
-        firstTime = false
     }
 
     fun updateEvents(pos: Int) {
-       val item = _state.value.items?.get(pos)
+       val item = items[pos]
         viewModelScope.launch {
-            if (item != null) {
-                findEventsUseCase(item.id).fold(::onError,::onEventSuccess)
-            }
+            findEventsUseCase(item.id).fold(::onError,::onEventSuccess)
         }
     }
 
     private fun onEventSuccess(items: List<EventItem>) {
-        _state.value = _state.value.copy(events = items)
+        _state.value = _state.value.copy(items = null, events = items)
     }
 
     data class UiState(

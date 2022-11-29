@@ -52,11 +52,10 @@ class HomeFragment: Fragment() {
     }
 
     private fun observers() {
-        viewLifecycleOwner.launchAndCollect(vm.state) {
-            if(vm.firstTime)
-                binding.items = it.items
-            binding.events = it.events
-            binding.error = it.error?.let(homeState::errorToString)
+        viewLifecycleOwner.launchAndCollect(vm.state) { state ->
+            state.items?.let { binding.items = it }
+            binding.events = state.events
+            binding.error = state.error?.let(homeState::errorToString)
         }
     }
 
@@ -64,7 +63,6 @@ class HomeFragment: Fragment() {
         binding.mainRecycler.attachSnapHelperWithListener(LinearSnapHelper(), SnapOnScrollListener.Behavior.NOTIFY_ON_SCROLL, object: OnSnapPositionChangeListener {
             override fun onSnapPositionChange(position: Int) {
                 vm.updateEvents(position)
-                Log.d("snap", "$position")
             }
         } )
     }
