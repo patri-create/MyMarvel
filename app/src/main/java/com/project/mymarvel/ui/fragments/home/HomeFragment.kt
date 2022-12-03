@@ -69,4 +69,9 @@ class HomeFragment: Fragment() {
             eventRecycler.addItemDecoration(MarginItemDecoration(resources.getDimensionPixelSize(R.dimen.margin)))
         }
     }
+
+    override fun onResume() {
+        super.onResume()
+        vm.onResume()
+    }
 }

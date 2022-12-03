@@ -20,7 +20,7 @@ class HomeViewModel @Inject constructor(
     private val findEventsUseCase: FindEventsByHeroIdUseCase
 ) : ViewModel() {
 
-    private lateinit var items: List<MarvelItem>
+    private var items: List<MarvelItem>? = null
 
     private val _state = MutableStateFlow(UiState())
     val state: StateFlow<UiState> = _state.asStateFlow()
@@ -41,14 +41,20 @@ class HomeViewModel @Inject constructor(
     }
 
     fun updateEvents(pos: Int) {
-        val item = items[pos]
-        viewModelScope.launch {
-            findEventsUseCase(item.id).fold(::onError, ::onEventSuccess)
+        items?.let { items ->
+            val item = items[pos]
+            viewModelScope.launch {
+                findEventsUseCase(item.id).fold(::onError, ::onEventSuccess)
+            }
         }
     }
 
     private fun onEventSuccess(items: List<EventItem>) {
         _state.value = _state.value.copy(items = null, events = items)
+    }
+
+    fun onResume() {
+        items.let { _state.value = _state.value.copy(items = items)  }
     }
 
     data class UiState(

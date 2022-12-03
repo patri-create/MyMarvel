@@ -74,4 +74,8 @@ class ComicsFragment : Fragment() {
         }
     }
 
+    override fun onResume() {
+        super.onResume()
+        vm.onResume()
+    }
 }
