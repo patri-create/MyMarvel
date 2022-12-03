@@ -7,8 +7,8 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.project.mymarvel.domain.EventItem
 import com.project.mymarvel.domain.MarvelItem
-import com.project.mymarvel.ui.home.adapters.EventAdapter
-import com.project.mymarvel.ui.home.adapters.HomeAdapter
+import com.project.mymarvel.ui.adapters.EventAdapter
+import com.project.mymarvel.ui.adapters.MarvelAdapter
 import ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
 
 @BindingAdapter("loadImage")
@@ -22,7 +22,7 @@ fun AppCompatImageView.loadImage(image: String) {
 @BindingAdapter("items")
 fun RecyclerView.setItems(items: List<MarvelItem>?) {
     items?.let {
-        adapter = HomeAdapter(items)
+        adapter = MarvelAdapter(items)
     }
 }
 

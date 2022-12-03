@@ -16,10 +16,10 @@ import java.io.IOException
 import java.math.BigInteger
 import java.security.MessageDigest
 import com.project.mymarvel.domain.Error
-import com.project.mymarvel.ui.comics.ComicsState
-import com.project.mymarvel.ui.home.HomeState
-import com.project.mymarvel.ui.home.adapters.OnSnapPositionChangeListener
-import com.project.mymarvel.ui.home.adapters.SnapOnScrollListener
+import com.project.mymarvel.ui.fragments.comics.ComicsState
+import com.project.mymarvel.ui.fragments.home.HomeState
+import com.project.mymarvel.ui.adapters.OnSnapPositionChangeListener
+import com.project.mymarvel.ui.adapters.SnapOnScrollListener
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 

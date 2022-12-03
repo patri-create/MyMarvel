@@ -1,4 +1,4 @@
-package com.project.mymarvel.ui.home.adapters
+package com.project.mymarvel.ui.adapters
 
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SnapHelper

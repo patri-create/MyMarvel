@@ -1,4 +1,4 @@
-package com.project.mymarvel.ui.home
+package com.project.mymarvel.ui.fragments.home
 
 import android.content.Context
 import com.project.mymarvel.R

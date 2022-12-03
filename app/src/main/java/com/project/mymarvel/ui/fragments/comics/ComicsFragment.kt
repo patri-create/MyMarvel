@@ -1,4 +1,4 @@
-package com.project.mymarvel.ui.comics
+package com.project.mymarvel.ui.fragments.comics
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,9 +12,9 @@ import com.project.mymarvel.common.utils.attachSnapHelperWithListener
 import com.project.mymarvel.common.utils.buildComicsState
 import com.project.mymarvel.common.utils.launchAndCollect
 import com.project.mymarvel.databinding.FragmentComicsBinding
-import com.project.mymarvel.ui.home.adapters.MarginItemDecoration
-import com.project.mymarvel.ui.home.adapters.OnSnapPositionChangeListener
-import com.project.mymarvel.ui.home.adapters.SnapOnScrollListener
+import com.project.mymarvel.ui.adapters.MarginItemDecoration
+import com.project.mymarvel.ui.adapters.OnSnapPositionChangeListener
+import com.project.mymarvel.ui.adapters.SnapOnScrollListener
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
