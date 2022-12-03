@@ -10,11 +10,17 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import com.project.mymarvel.domain.Error
+import com.project.mymarvel.domain.EventItem
+import com.project.mymarvel.domain.MarvelItem
+import com.project.mymarvel.usecases.FindEventsUseCase
+import kotlinx.coroutines.flow.update
 import javax.inject.Inject
 
 @HiltViewModel
-class HomeViewModel @Inject constructor(private val findHeroesUseCase: FindHeroesUseCase):
+class HomeViewModel @Inject constructor(private val findHeroesUseCase: FindHeroesUseCase, private val findEventsUseCase: FindEventsUseCase):
     ViewModel() {
+
+    private lateinit var items: List<MarvelItem>
 
     private val _state = MutableStateFlow(UiState())
     val state: StateFlow<UiState> = _state.asStateFlow()
@@ -29,12 +35,25 @@ class HomeViewModel @Inject constructor(private val findHeroesUseCase: FindHeroe
         _state.value = _state.value.copy(error = error)
     }
 
-    private fun onSuccess(heroes: List<Hero>) {
-        _state.value = _state.value.copy(heroes = heroes)
+    private fun onSuccess(items: List<MarvelItem>) {
+        this.items = items
+        _state.value = _state.value.copy(items = items)
+    }
+
+    fun updateEvents(pos: Int) {
+       val item = items[pos]
+        viewModelScope.launch {
+            findEventsUseCase(item.id).fold(::onError,::onEventSuccess)
+        }
+    }
+
+    private fun onEventSuccess(items: List<EventItem>) {
+        _state.value = _state.value.copy(items = null, events = items)
     }
 
     data class UiState(
-        val heroes: List<Hero>? = null,
+        val items: List<MarvelItem>? = null,
+        val events: List<EventItem>? = null,
         val error: Error? = null
     )
 }

@@ -6,6 +6,8 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.SnapHelper
 import arrow.core.Either
 import arrow.core.left
 import arrow.core.right
@@ -15,6 +17,8 @@ import java.math.BigInteger
 import java.security.MessageDigest
 import com.project.mymarvel.domain.Error
 import com.project.mymarvel.ui.home.HomeState
+import com.project.mymarvel.ui.home.adapters.OnSnapPositionChangeListener
+import com.project.mymarvel.ui.home.adapters.SnapOnScrollListener
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 
@@ -50,3 +54,19 @@ fun <T> LifecycleOwner.launchAndCollect(
 fun Fragment.buildHomeState(
     context: Context = requireContext()
 ) = HomeState(context)
+
+fun SnapHelper.getSnapPosition(recyclerView: RecyclerView): Int {
+    val layoutManager = recyclerView.layoutManager ?: return RecyclerView.NO_POSITION
+    val snapView = findSnapView(layoutManager) ?: return RecyclerView.NO_POSITION
+    return layoutManager.getPosition(snapView)
+}
+
+fun RecyclerView.attachSnapHelperWithListener(
+    snapHelper: SnapHelper,
+    behavior: SnapOnScrollListener.Behavior = SnapOnScrollListener.Behavior.NOTIFY_ON_SCROLL,
+    onSnapPositionChangeListener: OnSnapPositionChangeListener
+) {
+    snapHelper.attachToRecyclerView(this)
+    val snapOnScrollListener = SnapOnScrollListener(snapHelper, behavior, onSnapPositionChangeListener)
+    addOnScrollListener(snapOnScrollListener)
+}

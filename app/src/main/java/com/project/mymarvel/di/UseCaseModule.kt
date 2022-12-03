@@ -1,6 +1,7 @@
 package com.project.mymarvel.di
 
 import com.project.mymarvel.data.MarvelRepository
+import com.project.mymarvel.usecases.FindEventsUseCase
 import com.project.mymarvel.usecases.FindHeroesUseCase
 import dagger.Module
 import dagger.Provides
@@ -14,5 +15,10 @@ object UseCaseModule {
     @Provides
     fun providesFindHeroesUseCase(marvelRepository: MarvelRepository): FindHeroesUseCase {
         return FindHeroesUseCase(marvelRepository)
+    }
+
+    @Provides
+    fun providesFindEventsUseCase(marvelRepository: MarvelRepository): FindEventsUseCase {
+        return FindEventsUseCase(marvelRepository)
     }
 }

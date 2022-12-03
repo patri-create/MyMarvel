@@ -1,4 +1,4 @@
-package com.project.mymarvel.data.server.responses
+package com.project.mymarvel.data.server.responses.characters
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
