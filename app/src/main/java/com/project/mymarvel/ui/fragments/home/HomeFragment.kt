@@ -1,4 +1,4 @@
-package com.project.mymarvel.ui.home
+package com.project.mymarvel.ui.fragments.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -12,7 +12,7 @@ import com.project.mymarvel.common.utils.attachSnapHelperWithListener
 import com.project.mymarvel.common.utils.buildHomeState
 import com.project.mymarvel.common.utils.launchAndCollect
 import com.project.mymarvel.databinding.FragmentHomeBinding
-import com.project.mymarvel.ui.home.adapters.*
+import com.project.mymarvel.ui.adapters.*
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

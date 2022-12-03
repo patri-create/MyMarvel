@@ -1,4 +1,4 @@
-package com.project.mymarvel.ui.home.adapters
+package com.project.mymarvel.ui.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.project.mymarvel.databinding.ItemMarvelBinding
 import com.project.mymarvel.domain.MarvelItem
 
-class HomeAdapter(private val items: List<MarvelItem> ) : RecyclerView.Adapter<HomeAdapter.ViewHolder>() {
+class MarvelAdapter(private val items: List<MarvelItem> ) : RecyclerView.Adapter<MarvelAdapter.ViewHolder>() {
 
     class ViewHolder(val binding: ItemMarvelBinding) : RecyclerView.ViewHolder(binding.root)
 
