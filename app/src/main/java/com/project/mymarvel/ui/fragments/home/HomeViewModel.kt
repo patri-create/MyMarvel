@@ -53,8 +53,10 @@ class HomeViewModel @Inject constructor(
         _state.value = _state.value.copy(items = null, events = items)
     }
 
-    fun onResume() {
-        items.let { _state.value = _state.value.copy(items = items)  }
+    fun reload() {
+        items?.let {
+            _state.value = _state.value.copy(items = it)
+        }
     }
 
     data class UiState(

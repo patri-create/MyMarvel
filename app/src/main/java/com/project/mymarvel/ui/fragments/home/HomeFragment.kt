@@ -16,7 +16,7 @@ import com.project.mymarvel.ui.adapters.*
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class HomeFragment: Fragment() {
+class HomeFragment : Fragment() {
 
     private val vm: HomeViewModel by viewModels()
     private lateinit var homeState: HomeState
@@ -41,6 +41,7 @@ class HomeFragment: Fragment() {
         observers()
         listenSnapOnHomeRecyclerView()
         prepareRecyclerView()
+        fromMenu()
     }
 
     private fun stateHolder() {
@@ -56,11 +57,14 @@ class HomeFragment: Fragment() {
     }
 
     private fun listenSnapOnHomeRecyclerView() {
-        binding.mainRecycler.attachSnapHelperWithListener(LinearSnapHelper(), SnapOnScrollListener.Behavior.NOTIFY_ON_SCROLL, object: OnSnapPositionChangeListener {
-            override fun onSnapPositionChange(position: Int) {
-                vm.updateEvents(position)
-            }
-        } )
+        binding.mainRecycler.attachSnapHelperWithListener(
+            LinearSnapHelper(),
+            SnapOnScrollListener.Behavior.NOTIFY_ON_SCROLL,
+            object : OnSnapPositionChangeListener {
+                override fun onSnapPositionChange(position: Int) {
+                    vm.updateEvents(position)
+                }
+            })
     }
 
     private fun prepareRecyclerView() {
@@ -70,8 +74,7 @@ class HomeFragment: Fragment() {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        vm.onResume()
+    private fun fromMenu() {
+        vm.reload()
     }
 }

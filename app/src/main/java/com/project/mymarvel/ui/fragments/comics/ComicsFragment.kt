@@ -43,6 +43,7 @@ class ComicsFragment : Fragment() {
         observers()
         listenSnapOnHomeRecyclerView()
         prepareRecyclerView()
+        fromMenu()
     }
 
     private fun stateHolder() {
@@ -59,12 +60,15 @@ class ComicsFragment : Fragment() {
 
 
     private fun listenSnapOnHomeRecyclerView() {
-        binding.mainRecycler.attachSnapHelperWithListener(LinearSnapHelper(), SnapOnScrollListener.Behavior.NOTIFY_ON_SCROLL, object:
-            OnSnapPositionChangeListener {
-            override fun onSnapPositionChange(position: Int) {
-                vm.updateEvents(position)
-            }
-        } )
+        binding.mainRecycler.attachSnapHelperWithListener(
+            LinearSnapHelper(),
+            SnapOnScrollListener.Behavior.NOTIFY_ON_SCROLL,
+            object :
+                OnSnapPositionChangeListener {
+                override fun onSnapPositionChange(position: Int) {
+                    vm.updateEvents(position)
+                }
+            })
     }
 
     private fun prepareRecyclerView() {
@@ -74,8 +78,7 @@ class ComicsFragment : Fragment() {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        vm.onResume()
+    private fun fromMenu() {
+        vm.reload()
     }
 }
