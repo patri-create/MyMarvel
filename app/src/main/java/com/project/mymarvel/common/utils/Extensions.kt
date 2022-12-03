@@ -16,6 +16,7 @@ import java.io.IOException
 import java.math.BigInteger
 import java.security.MessageDigest
 import com.project.mymarvel.domain.Error
+import com.project.mymarvel.ui.comics.ComicsState
 import com.project.mymarvel.ui.home.HomeState
 import com.project.mymarvel.ui.home.adapters.OnSnapPositionChangeListener
 import com.project.mymarvel.ui.home.adapters.SnapOnScrollListener
@@ -54,6 +55,10 @@ fun <T> LifecycleOwner.launchAndCollect(
 fun Fragment.buildHomeState(
     context: Context = requireContext()
 ) = HomeState(context)
+
+fun Fragment.buildComicsState(
+    context: Context = requireContext()
+) = ComicsState(context)
 
 fun SnapHelper.getSnapPosition(recyclerView: RecyclerView): Int {
     val layoutManager = recyclerView.layoutManager ?: return RecyclerView.NO_POSITION

@@ -1,9 +1,11 @@
 package com.project.mymarvel.ui.base
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavController
+import androidx.navigation.NavDestination
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
@@ -14,7 +16,7 @@ import com.project.mymarvel.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(){
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
@@ -47,7 +49,8 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(binding.toolbar.toolbar)
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.home_dest
+                R.id.home_dest,
+                R.id.comics_dest
             ), binding.drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
