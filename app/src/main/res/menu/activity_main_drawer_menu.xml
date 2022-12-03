@@ -10,6 +10,11 @@
             android:icon="@drawable/ic_home"
             android:title="@string/menu_home" />
 
+        <item
+            android:id="@+id/comics_dest"
+            android:icon="@drawable/ic_comics"
+            android:title="@string/menu_comics" />
+
     </group>
 
 </menu>
