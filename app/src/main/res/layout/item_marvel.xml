@@ -22,6 +22,7 @@
             android:scaleType="centerCrop"
             app:shapeAppearanceOverlay="@style/roundedCornersImageView"
             app:loadImage="@{item.image}"
+            app:strokeColor="@null"
             app:srcCompat="@drawable/image_spiderman_placeholder" />
 
         <androidx.appcompat.widget.AppCompatTextView
@@ -30,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:gravity="center"
-            android:text="@{item.title}"
+            android:text="@{item.name}"
             tools:text="Spiderman" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
