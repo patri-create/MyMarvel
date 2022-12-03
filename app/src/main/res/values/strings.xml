@@ -1,4 +1,5 @@
 <resources>
+    <!--    App name  -->
     <string name="app_name">My Marvel</string>
 
     <!--    Drawer menu -->

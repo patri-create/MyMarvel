@@ -36,9 +36,9 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
-        android:background="@color/primaryColor"
-        app:itemIconTint="@color/secondaryColor"
-        app:itemTextColor="@color/secondaryColor"
+        android:background="@color/primary_color"
+        app:itemIconTint="@color/secondary_color"
+        app:itemTextColor="@color/secondary_color"
         app:menu="@menu/activity_main_drawer_menu"/>
 
 </androidx.drawerlayout.widget.DrawerLayout>
