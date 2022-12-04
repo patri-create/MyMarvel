@@ -1,20 +1,14 @@
 package com.project.mymarvel.common.utils
 
-import android.graphics.Typeface
-import android.util.Log
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.project.mymarvel.R
-import com.project.mymarvel.common.LocaleManager
 import com.project.mymarvel.domain.EventItem
-import com.project.mymarvel.domain.LanguageItem
 import com.project.mymarvel.domain.MarvelItem
 import com.project.mymarvel.ui.adapters.EventAdapter
-import com.project.mymarvel.ui.adapters.LanguageAdapter
 import com.project.mymarvel.ui.adapters.MarvelAdapter
 import ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
 

@@ -3,10 +3,10 @@ import com.project.mymarvel.buildsrc.Libs
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'kotlin-kapt'
     id 'org.jetbrains.kotlin.kapt'
     id 'androidx.navigation.safeargs.kotlin'
     id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
 }
 
 def propertiesFile = rootProject.file("local.properties").newDataInputStream()
