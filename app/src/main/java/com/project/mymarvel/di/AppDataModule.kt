@@ -1,6 +1,8 @@
 package com.project.mymarvel.di
 
+import com.project.mymarvel.data.datasource.PreferencesDataSource
 import com.project.mymarvel.data.datasource.RemoteDataSource
+import com.project.mymarvel.data.preferences.PreferencesDataSourceImp
 import com.project.mymarvel.data.server.RemoteDataSourceImp
 import dagger.Binds
 import dagger.Module
@@ -13,4 +15,7 @@ abstract class AppDataModule {
 
     @Binds
     abstract fun bindRemoteDataSource(remoteDataSourceImp: RemoteDataSourceImp): RemoteDataSource
+
+    @Binds
+    abstract fun bindPreferencesDataSource(preferencesDataSourceImp: PreferencesDataSourceImp): PreferencesDataSource
 }

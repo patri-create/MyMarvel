@@ -1,10 +1,8 @@
 package com.project.mymarvel.di
 
 import com.project.mymarvel.data.MarvelRepository
-import com.project.mymarvel.usecases.FindComicsUseCase
-import com.project.mymarvel.usecases.FindEventsByComicIdUseCase
-import com.project.mymarvel.usecases.FindEventsByHeroIdUseCase
-import com.project.mymarvel.usecases.FindHeroesUseCase
+import com.project.mymarvel.data.PreferencesRepository
+import com.project.mymarvel.usecases.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
