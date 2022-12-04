@@ -2,11 +2,9 @@ package com.project.mymarvel.ui.base
 
 import android.content.Context
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavController
-import androidx.navigation.NavDestination
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
@@ -15,12 +13,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.project.mymarvel.R
 import com.project.mymarvel.common.LocaleManager
 import com.project.mymarvel.databinding.ActivityMainBinding
-import dagger.hilt.EntryPoint
-import dagger.hilt.EntryPoints
-import dagger.hilt.InstallIn
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.components.SingletonComponent
-import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity(){

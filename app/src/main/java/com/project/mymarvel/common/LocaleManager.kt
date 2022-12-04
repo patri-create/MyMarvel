@@ -3,7 +3,6 @@ package com.project.mymarvel.common
 import android.content.Context
 import android.content.res.Configuration
 import android.content.res.Resources
-import com.project.mymarvel.App
 import com.project.mymarvel.data.PreferencesRepository
 import com.project.mymarvel.data.preferences.PreferencesDataSourceImp
 import com.project.mymarvel.data.preferences.PreferencesStorage
