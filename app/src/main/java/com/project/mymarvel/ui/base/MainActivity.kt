@@ -1,17 +1,17 @@
 package com.project.mymarvel.ui.base
 
+import android.content.Context
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavController
-import androidx.navigation.NavDestination
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.project.mymarvel.R
+import com.project.mymarvel.common.LocaleManager
 import com.project.mymarvel.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -46,11 +46,12 @@ class MainActivity : AppCompatActivity(){
     }
 
     private fun configureAppBar() {
-        setSupportActionBar(binding.toolbar.toolbar)
+        setSupportActionBar(binding.toolbar.toolbarComponent)
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.home_dest,
-                R.id.comics_dest
+                R.id.comics_dest,
+                R.id.settings_dest
             ), binding.drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
@@ -59,5 +60,9 @@ class MainActivity : AppCompatActivity(){
 
     override fun onSupportNavigateUp(): Boolean {
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(LocaleManager.newInstance(newBase).setLocale())
     }
 }

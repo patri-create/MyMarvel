@@ -11,11 +11,15 @@ import androidx.recyclerview.widget.SnapHelper
 import arrow.core.Either
 import arrow.core.left
 import arrow.core.right
+import com.project.mymarvel.App
+import com.project.mymarvel.R
+import com.project.mymarvel.common.LocaleManager
 import retrofit2.HttpException
 import java.io.IOException
 import java.math.BigInteger
 import java.security.MessageDigest
 import com.project.mymarvel.domain.Error
+import com.project.mymarvel.domain.Language
 import com.project.mymarvel.ui.fragments.comics.ComicsState
 import com.project.mymarvel.ui.fragments.home.HomeState
 import com.project.mymarvel.ui.adapters.OnSnapPositionChangeListener
@@ -74,4 +78,12 @@ fun RecyclerView.attachSnapHelperWithListener(
     snapHelper.attachToRecyclerView(this)
     val snapOnScrollListener = SnapOnScrollListener(snapHelper, behavior, onSnapPositionChangeListener)
     addOnScrollListener(snapOnScrollListener)
+}
+
+fun String.toLanguage(): Language {
+    return when(this) {
+        LocaleManager.ENGLISH -> Language(App.appContext.getString(R.string.language_english), "ic_english_flag", LocaleManager.ENGLISH)
+        LocaleManager.SPANISH -> Language(App.appContext.getString(R.string.language_spanish), "ic_spanish_flag", LocaleManager.SPANISH)
+        else -> { Language(App.appContext.getString(R.string.language_english), "ic_english_flag", LocaleManager.ENGLISH) }
+    }
 }
