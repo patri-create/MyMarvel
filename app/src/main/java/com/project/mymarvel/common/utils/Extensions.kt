@@ -81,9 +81,10 @@ fun RecyclerView.attachSnapHelperWithListener(
 }
 
 fun String.toLanguage(): Language {
+    val context = App.instance.applicationContext
     return when(this) {
-        LocaleManager.ENGLISH -> Language(App.appContext.getString(R.string.language_english), "ic_english_flag", LocaleManager.ENGLISH)
-        LocaleManager.SPANISH -> Language(App.appContext.getString(R.string.language_spanish), "ic_spanish_flag", LocaleManager.SPANISH)
-        else -> { Language(App.appContext.getString(R.string.language_english), "ic_english_flag", LocaleManager.ENGLISH) }
+        LocaleManager.ENGLISH -> Language(context.getString(R.string.language_english), "ic_english_flag", LocaleManager.ENGLISH)
+        LocaleManager.SPANISH -> Language(context.getString(R.string.language_spanish), "ic_spanish_flag", LocaleManager.SPANISH)
+        else -> { Language(context.getString(R.string.language_english), "ic_english_flag", LocaleManager.ENGLISH) }
     }
 }

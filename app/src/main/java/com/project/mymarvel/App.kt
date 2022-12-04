@@ -11,7 +11,7 @@ class App: Application() {
 
     override fun onCreate() {
         super.onCreate()
-        appContext = applicationContext
+        instance = this
     }
 
     override fun attachBaseContext(base: Context) {
@@ -20,11 +20,10 @@ class App: Application() {
 
     override fun onConfigurationChanged(newConfig: Configuration) {
         super.onConfigurationChanged(newConfig)
-        LocaleManager.newInstance(appContext).setLocale()
+        LocaleManager.newInstance(applicationContext).setLocale()
     }
 
     companion object {
-        lateinit var appContext: Context
-        fun instance() = this
+        lateinit var instance: App
     }
 }
