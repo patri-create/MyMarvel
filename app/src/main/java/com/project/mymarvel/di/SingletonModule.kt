@@ -19,7 +19,7 @@ import kotlin.reflect.jvm.internal.impl.descriptors.Visibilities
 
 @Module
 @InstallIn(SingletonComponent::class)
-object RepositoryModule {
+object SingletonModule {
 
     @Provides
     fun providesMarvelRepository(remoteDataSource: RemoteDataSource): MarvelRepository {

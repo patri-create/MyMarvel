@@ -18,8 +18,7 @@ class LocaleManager {
     private val savePreferencesUseCase: SavePreferencesUseCase by lazy { initSavePreferences() }
 
    fun setLocale(): Context {
-        setNewLocale(getLanguage())
-        return context
+        return updateResources(getLanguage())
     }
 
     fun setNewLocale(language: String) {
@@ -35,7 +34,7 @@ class LocaleManager {
         savePreferencesUseCase(key, language)
     }
 
-    private fun updateResources(language: String): Context? {
+    private fun updateResources(language: String): Context {
         val locale = Locale(language)
         Locale.setDefault(locale)
         val res: Resources = context.resources
@@ -57,6 +56,9 @@ class LocaleManager {
     }
 
     companion object {
+        const val ENGLISH = "en"
+        const val SPANISH = "es"
+
         private const val key = "currentLanguage"
         @JvmStatic
         fun newInstance(c: Context) =
