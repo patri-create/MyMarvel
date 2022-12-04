@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.project.mymarvel.R
+import com.project.mymarvel.common.LocaleManager
 import com.project.mymarvel.domain.EventItem
 import com.project.mymarvel.domain.LanguageItem
 import com.project.mymarvel.domain.MarvelItem
@@ -38,16 +39,6 @@ fun RecyclerView.setEvents(items: List<EventItem>?, indicator: ScrollingPagerInd
         adapter = EventAdapter(items)
         indicator.attachToRecyclerView(this)
 
-    }
-}
-
-@BindingAdapter("languages")
-fun RecyclerView.setLanguages(items: List<LanguageItem>?) {
-    items?.let {
-        adapter = LanguageAdapter(items) { binding ->
-            binding.imageView.background = ContextCompat.getDrawable(context, R.drawable.language_shadow)
-            binding.titleText.setTypeface(null, Typeface.BOLD)
-        }
     }
 }
 

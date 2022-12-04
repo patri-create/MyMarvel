@@ -1,17 +1,26 @@
 package com.project.mymarvel.ui.fragments.settings
 
+import android.graphics.Typeface
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.app.ActivityCompat.recreate
+import androidx.core.content.ContextCompat
+import com.project.mymarvel.R
+import com.project.mymarvel.common.LocaleManager
+import com.project.mymarvel.common.utils.toLanguage
 import com.project.mymarvel.databinding.FragmentSettingsBinding
-import com.project.mymarvel.domain.Language
+import com.project.mymarvel.databinding.ItemLanguageBinding
+import com.project.mymarvel.domain.LanguageItem
+import com.project.mymarvel.ui.adapters.LanguageAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class SettingsFragment : Fragment() {
 
+    private lateinit var items: List<LanguageItem>
     private lateinit var binding: FragmentSettingsBinding
 
     override fun onCreateView(
@@ -29,12 +38,30 @@ class SettingsFragment : Fragment() {
 
     private fun instances() {
         setLanguages()
+        configureRecyclerView()
     }
 
+
     private fun setLanguages() {
-        binding.items = listOf(
-            Language("English", "ic_english_flag"),
-            Language("Spanish", "ic_spanish_flag")
+        items = listOf(
+            LocaleManager.ENGLISH.toLanguage(),
+            LocaleManager.SPANISH.toLanguage()
         )
+    }
+
+    private fun configureRecyclerView() {
+        binding.languageRecycler.adapter = LanguageAdapter(items, ::onLanguageClick)
+    }
+
+    private fun loadLanguage() {
+        requireActivity().recreate()
+    }
+
+    private fun onLanguageClick(bin: ItemLanguageBinding, item: LanguageItem) {
+        bin.imageView.background =
+            ContextCompat.getDrawable(requireContext(), R.drawable.language_shadow)
+        bin.titleText.setTypeface(null, Typeface.BOLD)
+        LocaleManager.newInstance(requireContext()).setNewLocale(item.locale)
+        loadLanguage()
     }
 }

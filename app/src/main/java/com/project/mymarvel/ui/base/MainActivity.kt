@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity(){
     }
 
     private fun configureAppBar() {
-        setSupportActionBar(binding.toolbar.toolbar)
+        setSupportActionBar(binding.toolbar.toolbarComponent)
         appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.home_dest,

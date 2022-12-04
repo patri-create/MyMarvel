@@ -12,4 +12,6 @@
 
     <!--    Settings  -->
     <string name="choose_language">Elige tu idioma</string>
+    <string name="language_english">Inglés</string>
+    <string name="language_spanish">Español</string>
 </resources>
