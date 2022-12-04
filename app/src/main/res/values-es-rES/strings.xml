@@ -3,9 +3,13 @@
     <!--    Drawer menu -->
     <string name="menu_home">Inicio</string>
     <string name="menu_comics">Comics</string>
+    <string name="menu_settings">Configuración</string>
 
     <!--    Errors  -->
     <string name="error_connectivity">Error de conexión</string>
     <string name="error_server">Error de servidor</string>
     <string name="error_unknown">Error desconocido</string>
+
+    <!--    Settings  -->
+    <string name="choose_language">Elige tu idioma</string>
 </resources>

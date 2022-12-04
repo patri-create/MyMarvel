@@ -14,4 +14,9 @@
         android:name="com.project.mymarvel.ui.fragments.comics.ComicsFragment"
         android:label="@string/menu_comics"
         tools:layout="@layout/fragment_comics" />
+    <fragment
+        android:id="@+id/settings_dest"
+        android:name="com.project.mymarvel.ui.fragments.settings.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>

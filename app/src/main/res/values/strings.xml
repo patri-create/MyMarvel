@@ -8,9 +8,13 @@
     <!--    Drawer menu -->
     <string name="menu_home">Home</string>
     <string name="menu_comics">Comics</string>
+    <string name="menu_settings">Settings</string>
 
     <!--    Errors  -->
     <string name="error_connectivity">Connectivity error</string>
     <string name="error_server">Server error</string>
     <string name="error_unknown">Unknown error</string>
+
+    <!--    Settings  -->
+    <string name="choose_language">Choose your language</string>
 </resources>
