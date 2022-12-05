@@ -79,6 +79,7 @@ dependencies {
     implementation project(":data")
     implementation project(":domain")
     implementation project(":usecases")
+    implementation project(":testSamples")
 
     /* Kotlin */
     implementation Libs.Kotlin.Coroutines.core
