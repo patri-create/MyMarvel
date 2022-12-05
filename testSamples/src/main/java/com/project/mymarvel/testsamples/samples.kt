@@ -1,5 +1,6 @@
 package com.project.mymarvel.testsamples
 
+import com.project.mymarvel.domain.Comic
 import com.project.mymarvel.domain.Hero
 import com.project.mymarvel.domain.Event
 
@@ -14,4 +15,10 @@ val sampleEvent = Event(
     "https://image",
     "Title",
     "Description"
+)
+
+val sampleComic = Comic(
+    0,
+    "Name",
+    "https://image"
 )
