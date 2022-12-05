@@ -12,6 +12,7 @@ object Libs {
         object Coroutines {
             private const val version = "1.6.0"
             const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
+            const val test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$version"
         }
     }
 
@@ -89,6 +90,7 @@ object Libs {
     object OkHttp3 {
         private const val version = "4.9.3"
         const val loginInterceptor = "com.squareup.okhttp3:logging-interceptor:$version"
+        const val mockWebServer = "com.squareup.okhttp3:mockwebserver:$version"
     }
 
     object Retrofit {
@@ -119,5 +121,20 @@ object Libs {
 
     object JavaX {
         const val inject = "javax.inject:javax.inject:1"
+    }
+
+    object JUnit {
+        private const val version = "4.13.2"
+        const val junit = "junit:junit:$version"
+    }
+
+    object Mockito {
+        const val kotlin = "org.mockito.kotlin:mockito-kotlin:4.0.0"
+        const val inline = "org.mockito:mockito-inline:4.4.0"
+    }
+
+    object Turbine {
+        private const val version = "0.7.0"
+        const val turbine =  "app.cash.turbine:turbine:0.7.0"
     }
 }

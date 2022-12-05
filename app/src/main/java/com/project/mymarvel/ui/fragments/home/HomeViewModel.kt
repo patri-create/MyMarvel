@@ -20,7 +20,7 @@ class HomeViewModel @Inject constructor(
     private val findEventsUseCase: FindEventsByHeroIdUseCase
 ) : ViewModel() {
 
-    private var items: List<MarvelItem>? = null
+    var items: List<MarvelItem>? = null
 
     private val _state = MutableStateFlow(UiState())
     val state: StateFlow<UiState> = _state.asStateFlow()
