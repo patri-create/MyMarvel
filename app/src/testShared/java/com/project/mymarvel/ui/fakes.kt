@@ -1,9 +1,9 @@
-package com.project.mymarvel.fakes
+package com.project.mymarvel.ui
 
 import com.project.mymarvel.data.server.ApiService
-import com.project.mymarvel.fakes.helpers.buildRemoteCharacterDataWrapper
-import com.project.mymarvel.fakes.helpers.buildRemoteComicDataWrapper
-import com.project.mymarvel.fakes.helpers.buildRemoteEventDataWrapper
+import com.project.mymarvel.ui.helpers.buildRemoteCharacterDataWrapper
+import com.project.mymarvel.ui.helpers.buildRemoteComicDataWrapper
+import com.project.mymarvel.ui.helpers.buildRemoteEventDataWrapper
 
 class FakeApiService : ApiService {
     override suspend fun getCharacters() = buildRemoteCharacterDataWrapper()

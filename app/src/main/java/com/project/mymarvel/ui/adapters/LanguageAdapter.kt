@@ -44,7 +44,7 @@ class LanguageAdapter(
             val context = imageView.context
             val currentLanguage = LocaleManager.newInstance(context).getLanguage().toLanguage()
 
-            if(item != currentLanguage)
+            if (item != currentLanguage)
                 return
 
             imageView.background = ContextCompat.getDrawable(context, R.drawable.language_shadow)
@@ -53,7 +53,11 @@ class LanguageAdapter(
         }
     }
 
-    private fun fillLanguageItem(binding: ItemLanguageBinding, item: LanguageItem, holder: ViewHolder) {
+    private fun fillLanguageItem(
+        binding: ItemLanguageBinding,
+        item: LanguageItem,
+        holder: ViewHolder
+    ) {
         binding.item = item
         binding.languageContainer.setOnClickListener {
             resetLastLanguageSelected()

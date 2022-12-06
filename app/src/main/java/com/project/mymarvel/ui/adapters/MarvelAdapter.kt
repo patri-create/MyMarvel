@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.project.mymarvel.databinding.ItemMarvelBinding
 import com.project.mymarvel.domain.MarvelItem
 
-class MarvelAdapter(private val items: List<MarvelItem> ) : RecyclerView.Adapter<MarvelAdapter.ViewHolder>() {
+class MarvelAdapter(private val items: List<MarvelItem>) :
+    RecyclerView.Adapter<MarvelAdapter.ViewHolder>() {
 
     class ViewHolder(val binding: ItemMarvelBinding) : RecyclerView.ViewHolder(binding.root)
 

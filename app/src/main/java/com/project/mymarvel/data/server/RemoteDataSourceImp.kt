@@ -7,29 +7,31 @@ import com.project.mymarvel.data.server.responses.Image
 import com.project.mymarvel.data.server.responses.characters.Character
 import com.project.mymarvel.data.server.responses.comics.Comic
 import com.project.mymarvel.data.server.responses.events.Event
-import com.project.mymarvel.domain.Comic as DomainComic
 import com.project.mymarvel.domain.Error
-import com.project.mymarvel.domain.Event as DomainEvent
 import com.project.mymarvel.domain.Hero
 import javax.inject.Inject
+import com.project.mymarvel.domain.Comic as DomainComic
+import com.project.mymarvel.domain.Event as DomainEvent
 
-class RemoteDataSourceImp @Inject constructor(private val api: ApiService): RemoteDataSource {
+class RemoteDataSourceImp @Inject constructor(private val api: ApiService) : RemoteDataSource {
 
     override suspend fun findHeroes(): Either<Error, List<Hero>> = tryCall {
         api.getCharacters().data.results.map { it.toDomain() }
     }
 
-    override suspend fun findEventsByHeroId(heroId: Int): Either<Error, List<DomainEvent>> = tryCall {
-        api.getEventsByCharacterId(heroId).data.results.map { it.toDomain() }
-    }
+    override suspend fun findEventsByHeroId(heroId: Int): Either<Error, List<DomainEvent>> =
+        tryCall {
+            api.getEventsByCharacterId(heroId).data.results.map { it.toDomain() }
+        }
 
     override suspend fun findComics(): Either<Error, List<DomainComic>> = tryCall {
         api.getComics().data.results.map { it.toDomain() }
     }
 
-    override suspend fun findEventsByComicId(comicId: Int): Either<Error, List<DomainEvent>> = tryCall {
-        api.getEventsByComicId(comicId).data.results.map { it.toDomain() }
-    }
+    override suspend fun findEventsByComicId(comicId: Int): Either<Error, List<DomainEvent>> =
+        tryCall {
+            api.getEventsByComicId(comicId).data.results.map { it.toDomain() }
+        }
 }
 
 private fun Character.toDomain(): Hero =

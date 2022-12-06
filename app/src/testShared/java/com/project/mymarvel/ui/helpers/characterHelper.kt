@@ -1,4 +1,4 @@
-package com.project.mymarvel.fakes.helpers
+package com.project.mymarvel.ui.helpers
 
 import com.project.mymarvel.data.server.responses.Image
 import com.project.mymarvel.data.server.responses.characters.Character

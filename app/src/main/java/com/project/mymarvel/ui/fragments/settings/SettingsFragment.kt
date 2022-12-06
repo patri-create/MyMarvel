@@ -2,12 +2,11 @@ package com.project.mymarvel.ui.fragments.settings
 
 import android.graphics.Typeface
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.app.ActivityCompat.recreate
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import com.project.mymarvel.R
 import com.project.mymarvel.common.LocaleManager
 import com.project.mymarvel.common.utils.toLanguage

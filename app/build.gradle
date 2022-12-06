@@ -24,7 +24,7 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.project.mymarvel.di.HiltTestRunner"
     }
 
     bundle {
@@ -51,10 +51,12 @@ android {
                 minifyEnabled false
                 debuggable false
                 proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+                manifestPlaceholders = [clearTraffic: false]
             }
 
             debug {
                 debuggable true
+                manifestPlaceholders = [clearTraffic: true]
             }
         }
 
@@ -70,6 +72,15 @@ android {
         buildFeatures {
             viewBinding = true
             dataBinding = true
+        }
+    }
+    sourceSets {
+        test {
+            java.srcDirs += "$projectDir/src/testShared/java"
+        }
+
+        androidTest {
+            java.srcDirs += "$projectDir/src/testShared/java"
         }
     }
 }
