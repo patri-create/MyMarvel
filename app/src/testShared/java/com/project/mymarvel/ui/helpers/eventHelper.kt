@@ -1,4 +1,4 @@
-package com.project.mymarvel.fakes.helpers
+package com.project.mymarvel.ui.helpers
 
 import com.project.mymarvel.data.server.responses.events.Event
 import com.project.mymarvel.data.server.responses.events.EventDataContainer

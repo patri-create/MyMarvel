@@ -72,6 +72,15 @@ android {
             dataBinding = true
         }
     }
+    sourceSets {
+        test {
+            java.srcDirs += "$projectDir/src/testShared/java"
+        }
+
+        androidTest {
+            java.srcDirs += "$projectDir/src/testShared/java"
+        }
+    }
 }
 
 dependencies {
