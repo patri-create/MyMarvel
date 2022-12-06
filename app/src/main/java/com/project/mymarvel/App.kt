@@ -7,7 +7,7 @@ import com.project.mymarvel.common.LocaleManager
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class App: Application() {
+class App : Application() {
 
     override fun onCreate() {
         super.onCreate()

@@ -6,7 +6,11 @@ import android.view.LayoutInflater
 import androidx.coordinatorlayout.widget.CoordinatorLayout
 import com.project.mymarvel.databinding.LayoutToolbarBinding
 
-class Toolbar @JvmOverloads constructor(context: Context, attrs: AttributeSet? = null, defStyle: Int = 0) :
+class Toolbar @JvmOverloads constructor(
+    context: Context,
+    attrs: AttributeSet? = null,
+    defStyle: Int = 0
+) :
     CoordinatorLayout(context, attrs, defStyle) {
 
     private var binding: LayoutToolbarBinding = LayoutToolbarBinding.inflate(

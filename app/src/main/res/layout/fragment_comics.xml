@@ -4,21 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <import type="java.util.List"/>
-        <import type="com.project.mymarvel.domain.MarvelItem"/>
-        <import type="com.project.mymarvel.domain.EventItem"/>
+
+        <import type="java.util.List" />
+
+        <import type="com.project.mymarvel.domain.MarvelItem" />
+
+        <import type="com.project.mymarvel.domain.EventItem" />
 
         <variable
             name="items"
-            type="List&lt;MarvelItem>"/>
+            type="List&lt;MarvelItem>" />
 
         <variable
             name="events"
-            type="List&lt;EventItem>"/>
+            type="List&lt;EventItem>" />
 
         <variable
             name="error"
-            type="String"/>
+            type="String" />
     </data>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
@@ -84,12 +87,11 @@
                 android:layout_gravity="center"
                 android:textAppearance="@style/TextAppearance.MaterialComponents.Headline4"
                 android:textColor="?attr/colorError"
-                android:text="@{error}"/>
+                android:text="@{error}" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
-
 
 
 </layout>

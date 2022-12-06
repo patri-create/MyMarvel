@@ -1,10 +1,10 @@
 package com.project.mymarvel.ui.fragments.home
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearSnapHelper
 import com.project.mymarvel.R
@@ -12,7 +12,9 @@ import com.project.mymarvel.common.utils.attachSnapHelperWithListener
 import com.project.mymarvel.common.utils.buildHomeState
 import com.project.mymarvel.common.utils.launchAndCollect
 import com.project.mymarvel.databinding.FragmentHomeBinding
-import com.project.mymarvel.ui.adapters.*
+import com.project.mymarvel.ui.adapters.MarginItemDecoration
+import com.project.mymarvel.ui.adapters.OnSnapPositionChangeListener
+import com.project.mymarvel.ui.adapters.SnapOnScrollListener
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

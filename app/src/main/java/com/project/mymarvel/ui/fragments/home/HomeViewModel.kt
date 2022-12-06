@@ -2,16 +2,16 @@ package com.project.mymarvel.ui.fragments.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.project.mymarvel.domain.Error
+import com.project.mymarvel.domain.EventItem
+import com.project.mymarvel.domain.MarvelItem
+import com.project.mymarvel.usecases.FindEventsByHeroIdUseCase
 import com.project.mymarvel.usecases.FindHeroesUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
-import com.project.mymarvel.domain.Error
-import com.project.mymarvel.domain.EventItem
-import com.project.mymarvel.domain.MarvelItem
-import com.project.mymarvel.usecases.FindEventsByHeroIdUseCase
 import javax.inject.Inject
 
 @HiltViewModel

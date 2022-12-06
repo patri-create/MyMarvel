@@ -1,7 +1,6 @@
 package com.project.mymarvel.di
 
 import android.content.Context
-import com.project.mymarvel.common.LocaleManager
 import com.project.mymarvel.data.MarvelRepository
 import com.project.mymarvel.data.PreferencesRepository
 import com.project.mymarvel.data.datasource.PreferencesDataSource
@@ -14,8 +13,6 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
-import javax.inject.Singleton
-import kotlin.reflect.jvm.internal.impl.descriptors.Visibilities
 
 @Module
 @InstallIn(SingletonComponent::class)
