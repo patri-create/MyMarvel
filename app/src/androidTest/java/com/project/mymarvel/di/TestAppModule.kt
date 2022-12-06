@@ -38,7 +38,10 @@ object TestAppModule {
 
     @Singleton
     @Provides
-    fun providesOkHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor, @ApiKeyInterceptorOkHttpClient networkInterceptor: Interceptor): OkHttpClient =
+    fun providesOkHttpClient(
+        httpLoggingInterceptor: HttpLoggingInterceptor,
+        @ApiKeyInterceptorOkHttpClient networkInterceptor: Interceptor
+    ): OkHttpClient =
         OkHttpClient
             .Builder()
             .addInterceptor(httpLoggingInterceptor)

@@ -14,18 +14,18 @@ import arrow.core.right
 import com.project.mymarvel.App
 import com.project.mymarvel.R
 import com.project.mymarvel.common.LocaleManager
+import com.project.mymarvel.domain.Error
+import com.project.mymarvel.domain.Language
+import com.project.mymarvel.ui.adapters.OnSnapPositionChangeListener
+import com.project.mymarvel.ui.adapters.SnapOnScrollListener
+import com.project.mymarvel.ui.fragments.comics.ComicsState
+import com.project.mymarvel.ui.fragments.home.HomeState
+import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.launch
 import retrofit2.HttpException
 import java.io.IOException
 import java.math.BigInteger
 import java.security.MessageDigest
-import com.project.mymarvel.domain.Error
-import com.project.mymarvel.domain.Language
-import com.project.mymarvel.ui.fragments.comics.ComicsState
-import com.project.mymarvel.ui.fragments.home.HomeState
-import com.project.mymarvel.ui.adapters.OnSnapPositionChangeListener
-import com.project.mymarvel.ui.adapters.SnapOnScrollListener
-import kotlinx.coroutines.flow.Flow
-import kotlinx.coroutines.launch
 
 fun String.md5(): String {
     val md = MessageDigest.getInstance("MD5")
@@ -76,15 +76,30 @@ fun RecyclerView.attachSnapHelperWithListener(
     onSnapPositionChangeListener: OnSnapPositionChangeListener
 ) {
     snapHelper.attachToRecyclerView(this)
-    val snapOnScrollListener = SnapOnScrollListener(snapHelper, behavior, onSnapPositionChangeListener)
+    val snapOnScrollListener =
+        SnapOnScrollListener(snapHelper, behavior, onSnapPositionChangeListener)
     addOnScrollListener(snapOnScrollListener)
 }
 
 fun String.toLanguage(): Language {
     val context = App.instance.applicationContext
-    return when(this) {
-        LocaleManager.ENGLISH -> Language(context.getString(R.string.language_english), "ic_english_flag", LocaleManager.ENGLISH)
-        LocaleManager.SPANISH -> Language(context.getString(R.string.language_spanish), "ic_spanish_flag", LocaleManager.SPANISH)
-        else -> { Language(context.getString(R.string.language_english), "ic_english_flag", LocaleManager.ENGLISH) }
+    return when (this) {
+        LocaleManager.ENGLISH -> Language(
+            context.getString(R.string.language_english),
+            "ic_english_flag",
+            LocaleManager.ENGLISH
+        )
+        LocaleManager.SPANISH -> Language(
+            context.getString(R.string.language_spanish),
+            "ic_spanish_flag",
+            LocaleManager.SPANISH
+        )
+        else -> {
+            Language(
+                context.getString(R.string.language_english),
+                "ic_english_flag",
+                LocaleManager.ENGLISH
+            )
+        }
     }
 }

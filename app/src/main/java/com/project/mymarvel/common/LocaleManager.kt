@@ -17,7 +17,7 @@ class LocaleManager {
     private val findPreferencesUseCase: FindPreferencesUseCase by lazy { initFindPreferences() }
     private val savePreferencesUseCase: SavePreferencesUseCase by lazy { initSavePreferences() }
 
-   fun setLocale(): Context {
+    fun setLocale(): Context {
         return updateResources(getLanguage())
     }
 
@@ -44,15 +44,23 @@ class LocaleManager {
     }
 
     private fun initSavePreferences(): SavePreferencesUseCase {
-        return SavePreferencesUseCase(PreferencesRepository(PreferencesDataSourceImp(
-            PreferencesStorage(context)
-        )))
+        return SavePreferencesUseCase(
+            PreferencesRepository(
+                PreferencesDataSourceImp(
+                    PreferencesStorage(context)
+                )
+            )
+        )
     }
 
     private fun initFindPreferences(): FindPreferencesUseCase {
-        return FindPreferencesUseCase(PreferencesRepository(PreferencesDataSourceImp(
-            PreferencesStorage(context)
-        )))
+        return FindPreferencesUseCase(
+            PreferencesRepository(
+                PreferencesDataSourceImp(
+                    PreferencesStorage(context)
+                )
+            )
+        )
     }
 
     companion object {
@@ -60,10 +68,11 @@ class LocaleManager {
         const val SPANISH = "es"
 
         private const val key = "currentLanguage"
+
         @JvmStatic
         fun newInstance(c: Context) =
             LocaleManager().apply {
                 context = c
-        }
+            }
     }
 }

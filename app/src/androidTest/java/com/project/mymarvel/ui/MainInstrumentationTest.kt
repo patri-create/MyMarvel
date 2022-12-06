@@ -2,11 +2,12 @@ package com.project.mymarvel.ui
 
 import androidx.recyclerview.widget.RecyclerView
 import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.IdlingRegistry
 import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.contrib.RecyclerViewActions
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.ext.junit.rules.ActivityScenarioRule
+import com.project.mymarvel.R
+import com.project.mymarvel.data.server.enqueueMany
 import com.project.mymarvel.data.server.fromJson
 import com.project.mymarvel.rules.MockWebServerRule
 import com.project.mymarvel.ui.base.MainActivity
@@ -19,8 +20,6 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import javax.inject.Inject
-import com.project.mymarvel.R
-import com.project.mymarvel.data.server.enqueueMany
 
 @ExperimentalCoroutinesApi
 @HiltAndroidTest
