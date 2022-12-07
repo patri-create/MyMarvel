@@ -38,7 +38,8 @@ private fun Character.toDomain(): Hero =
     Hero(
         id,
         name,
-        thumbnail.toDomain()
+        thumbnail.toDomain(),
+        description
     )
 
 private fun Image.toDomain(): String = "$path.$extension"
@@ -55,5 +56,6 @@ private fun Comic.toDomain(): DomainComic =
     DomainComic(
         id,
         title,
-        thumbnail.toDomain()
+        thumbnail.toDomain(),
+        description?: ""
     )

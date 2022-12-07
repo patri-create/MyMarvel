@@ -5,6 +5,9 @@
     <string name="menu_comics">Comics</string>
     <string name="menu_settings">Configuración</string>
 
+    <!--    Toolbar  -->
+    <string name="toolbar_detail">Detalle</string>
+
     <!--    Errors  -->
     <string name="error_connectivity">Error de conexión</string>
     <string name="error_server">Error de servidor</string>

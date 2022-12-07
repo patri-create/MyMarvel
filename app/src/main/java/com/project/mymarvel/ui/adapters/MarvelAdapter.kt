@@ -5,9 +5,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.project.mymarvel.databinding.ItemMarvelBinding
 import com.project.mymarvel.domain.MarvelItem
+import kotlin.properties.Delegates
 
-class MarvelAdapter(private val items: List<MarvelItem>) :
+class MarvelAdapter(private val onClickItem: (MarvelItem) -> Unit) :
     RecyclerView.Adapter<MarvelAdapter.ViewHolder>() {
+
+    var items: List<MarvelItem> by Delegates.observable(emptyList()) { _, _, _ ->
+        notifyDataSetChanged()
+    }
 
     class ViewHolder(val binding: ItemMarvelBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -29,5 +34,6 @@ class MarvelAdapter(private val items: List<MarvelItem>) :
 
     private fun fillMarvelItem(binding: ItemMarvelBinding, item: MarvelItem) {
         binding.item = item
+        binding.root.setOnClickListener { onClickItem(item) }
     }
 }
