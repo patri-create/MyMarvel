@@ -1,10 +1,10 @@
 package com.project.mymarvel.ui.home
 
 import app.cash.turbine.test
-import com.project.mymarvel.ui.helpers.buildMarvelRepository
 import com.project.mymarvel.rules.CoroutinesTestRule
 import com.project.mymarvel.ui.fragments.home.HomeViewModel
 import com.project.mymarvel.ui.fragments.home.HomeViewModel.UiState
+import com.project.mymarvel.ui.helpers.buildMarvelRepository
 import com.project.mymarvel.usecases.FindEventsByHeroIdUseCase
 import com.project.mymarvel.usecases.FindHeroesUseCase
 import kotlinx.coroutines.ExperimentalCoroutinesApi

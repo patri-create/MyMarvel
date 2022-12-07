@@ -37,6 +37,7 @@ class ComicsViewModelTest {
     /* Mocks */
     @Mock
     lateinit var findComicsUseCase: FindComicsUseCase
+
     @Mock
     lateinit var findEventsByComicIdUseCase: FindEventsByComicIdUseCase
 

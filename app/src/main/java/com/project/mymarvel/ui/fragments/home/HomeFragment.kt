@@ -21,14 +21,14 @@ import dagger.hilt.android.AndroidEntryPoint
 class HomeFragment : Fragment() {
 
     private val vm: HomeViewModel by viewModels()
-    private lateinit var homeState: HomeState
+    private lateinit var state: HomeState
 
     private lateinit var binding: FragmentHomeBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -47,14 +47,14 @@ class HomeFragment : Fragment() {
     }
 
     private fun stateHolder() {
-        homeState = buildHomeState()
+        state = buildHomeState()
     }
 
     private fun observers() {
-        viewLifecycleOwner.launchAndCollect(vm.state) { state ->
-            state.items?.let { binding.items = it }
-            binding.events = state.events
-            binding.error = state.error?.let(homeState::errorToString)
+        viewLifecycleOwner.launchAndCollect(vm.state) { uiState ->
+            uiState.items?.let { binding.items = it }
+            binding.events = uiState.events
+            binding.error = uiState.error?.let(state::errorToString)
         }
     }
 
