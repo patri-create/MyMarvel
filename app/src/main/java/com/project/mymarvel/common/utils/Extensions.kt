@@ -29,6 +29,7 @@ import java.io.IOException
 import java.math.BigInteger
 import java.security.MessageDigest
 
+//region Network
 fun String.md5(): String {
     val md = MessageDigest.getInstance("MD5")
     return BigInteger(1, md.digest(toByteArray())).toString(16).padStart(32, '0')
@@ -45,7 +46,10 @@ fun Throwable.toError(): Error = when (this) {
     is HttpException -> Error.Server(code())
     else -> Error.Unknown(message ?: "")
 }
+//endregion
 
+
+//region StateFlow
 fun <T> LifecycleOwner.launchAndCollect(
     flow: Flow<T>,
     state: Lifecycle.State = Lifecycle.State.STARTED,
@@ -57,7 +61,10 @@ fun <T> LifecycleOwner.launchAndCollect(
         }
     }
 }
+//endregion
 
+
+//region StateHolder
 fun Fragment.buildHomeState(
     context: Context = requireContext()
 ) = HomeState(context)
@@ -70,7 +77,10 @@ fun Fragment.buildSettingsState(
     context: Context = requireContext(),
     activity: Activity = requireActivity()
 ) = SettingsState(context, activity)
+//endregion
 
+
+//region RecyclerView
 fun SnapHelper.getSnapPosition(recyclerView: RecyclerView): Int {
     val layoutManager = recyclerView.layoutManager ?: return RecyclerView.NO_POSITION
     val snapView = findSnapView(layoutManager) ?: return RecyclerView.NO_POSITION
@@ -87,7 +97,10 @@ fun RecyclerView.attachSnapHelperWithListener(
         SnapOnScrollListener(snapHelper, behavior, onSnapPositionChangeListener)
     addOnScrollListener(snapOnScrollListener)
 }
+//endregion
 
+
+//region Locale
 fun String.toLanguage(): Language {
     val context = App.instance.applicationContext
     return when (this) {
@@ -110,3 +123,4 @@ fun String.toLanguage(): Language {
         }
     }
 }
+//endregion
