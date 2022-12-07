@@ -4,6 +4,7 @@ object Libs {
 
     const val androidGradlePlugin = "com.android.tools.build:gradle:7.2.2"
     const val gradleVersionsPlugin = "com.github.ben-manes:gradle-versions-plugin:0.44.0"
+    const val playServicesLocation = "com.google.android.gms:play-services-location:19.0.1"
 
     object Kotlin {
         private const val version = "1.7.21"

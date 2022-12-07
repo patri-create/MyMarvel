@@ -1,6 +1,8 @@
 package com.project.mymarvel.di
 
+import android.app.Application
 import android.content.Context
+import com.project.mymarvel.common.LocationHelper
 import com.project.mymarvel.data.MarvelRepository
 import com.project.mymarvel.data.PreferencesRepository
 import com.project.mymarvel.data.datasource.PreferencesDataSource
@@ -41,5 +43,10 @@ object SingletonModule {
     @Provides
     fun providesSavePreferencesUseCase(preferencesRepository: PreferencesRepository): SavePreferencesUseCase {
         return SavePreferencesUseCase(preferencesRepository)
+    }
+
+    @Provides
+    fun providesLocationHelper(app: Application): LocationHelper {
+        return LocationHelper(app)
     }
 }
