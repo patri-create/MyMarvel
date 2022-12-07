@@ -1,5 +1,6 @@
 package com.project.mymarvel.common.utils
 
+import android.app.Activity
 import android.content.Context
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Lifecycle
@@ -20,6 +21,7 @@ import com.project.mymarvel.ui.adapters.OnSnapPositionChangeListener
 import com.project.mymarvel.ui.adapters.SnapOnScrollListener
 import com.project.mymarvel.ui.fragments.comics.ComicsState
 import com.project.mymarvel.ui.fragments.home.HomeState
+import com.project.mymarvel.ui.fragments.settings.SettingsState
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
@@ -63,6 +65,11 @@ fun Fragment.buildHomeState(
 fun Fragment.buildComicsState(
     context: Context = requireContext()
 ) = ComicsState(context)
+
+fun Fragment.buildSettingsState(
+    context: Context = requireContext(),
+    activity: Activity = requireActivity()
+) = SettingsState(context, activity)
 
 fun SnapHelper.getSnapPosition(recyclerView: RecyclerView): Int {
     val layoutManager = recyclerView.layoutManager ?: return RecyclerView.NO_POSITION
