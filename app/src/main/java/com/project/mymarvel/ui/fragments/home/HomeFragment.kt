@@ -13,6 +13,7 @@ import com.project.mymarvel.common.utils.buildHomeState
 import com.project.mymarvel.common.utils.launchAndCollect
 import com.project.mymarvel.databinding.FragmentHomeBinding
 import com.project.mymarvel.ui.adapters.MarginItemDecoration
+import com.project.mymarvel.ui.adapters.MarvelAdapter
 import com.project.mymarvel.ui.adapters.OnSnapPositionChangeListener
 import com.project.mymarvel.ui.adapters.SnapOnScrollListener
 import dagger.hilt.android.AndroidEntryPoint
@@ -22,6 +23,7 @@ class HomeFragment : Fragment() {
 
     private val vm: HomeViewModel by viewModels()
     private lateinit var state: HomeState
+    private val adapter = MarvelAdapter { state.onItemClick(it) }
 
     private lateinit var binding: FragmentHomeBinding
 
@@ -71,6 +73,7 @@ class HomeFragment : Fragment() {
 
     private fun prepareRecyclerView() {
         with(binding) {
+            mainRecycler.adapter = adapter
             mainRecycler.addItemDecoration(MarginItemDecoration(resources.getDimensionPixelSize(R.dimen.margin)))
             eventRecycler.addItemDecoration(MarginItemDecoration(resources.getDimensionPixelSize(R.dimen.margin)))
         }

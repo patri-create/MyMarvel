@@ -7,6 +7,8 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SnapHelper
 import arrow.core.Either
@@ -66,12 +68,14 @@ fun <T> LifecycleOwner.launchAndCollect(
 
 //region StateHolder
 fun Fragment.buildHomeState(
-    context: Context = requireContext()
-) = HomeState(context)
+    context: Context = requireContext(),
+    navController: NavController = findNavController()
+) = HomeState(context, navController)
 
 fun Fragment.buildComicsState(
-    context: Context = requireContext()
-) = ComicsState(context)
+    context: Context = requireContext(),
+    navController: NavController = findNavController()
+) = ComicsState(context, navController)
 
 fun Fragment.buildSettingsState(
     context: Context = requireContext(),

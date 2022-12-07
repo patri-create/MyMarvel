@@ -22,8 +22,8 @@ fun AppCompatImageView.loadImage(image: String) {
 
 @BindingAdapter("items")
 fun RecyclerView.setItems(items: List<MarvelItem>?) {
-    items?.let {
-        adapter = MarvelAdapter(items)
+    (adapter as? MarvelAdapter)?.let {
+        it.items = items?: emptyList()
     }
 }
 

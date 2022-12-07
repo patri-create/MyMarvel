@@ -13,6 +13,7 @@ import com.project.mymarvel.common.utils.buildComicsState
 import com.project.mymarvel.common.utils.launchAndCollect
 import com.project.mymarvel.databinding.FragmentComicsBinding
 import com.project.mymarvel.ui.adapters.MarginItemDecoration
+import com.project.mymarvel.ui.adapters.MarvelAdapter
 import com.project.mymarvel.ui.adapters.OnSnapPositionChangeListener
 import com.project.mymarvel.ui.adapters.SnapOnScrollListener
 import dagger.hilt.android.AndroidEntryPoint
@@ -22,6 +23,7 @@ class ComicsFragment : Fragment() {
 
     private val vm: ComicsViewModel by viewModels()
     private lateinit var state: ComicsState
+    private val adapter = MarvelAdapter { state.onItemClick(it) }
 
     private lateinit var binding: FragmentComicsBinding
 
@@ -73,6 +75,7 @@ class ComicsFragment : Fragment() {
 
     private fun prepareRecyclerView() {
         with(binding) {
+            mainRecycler.adapter = adapter
             mainRecycler.addItemDecoration(MarginItemDecoration(resources.getDimensionPixelSize(R.dimen.margin)))
             eventRecycler.addItemDecoration(MarginItemDecoration(resources.getDimensionPixelSize(R.dimen.margin)))
         }

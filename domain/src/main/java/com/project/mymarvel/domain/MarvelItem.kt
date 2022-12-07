@@ -1,7 +1,10 @@
 package com.project.mymarvel.domain
 
-interface MarvelItem {
+import java.io.Serializable
+
+interface MarvelItem: Serializable {
     var id: Int
     var name: String
     var image: String
+    var description: String
 }
