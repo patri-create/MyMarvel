@@ -13,7 +13,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class SettingsFragment : Fragment() {
 
-    private lateinit var settingsState: SettingsState
+    private lateinit var state: SettingsState
     private lateinit var binding: FragmentSettingsBinding
 
     override fun onCreateView(
@@ -35,13 +35,13 @@ class SettingsFragment : Fragment() {
     }
 
     private fun stateHolder() {
-        settingsState = buildSettingsState()
+        state = buildSettingsState()
     }
 
     private fun configureRecyclerView() {
         binding.languageRecycler.adapter = LanguageAdapter(
-            settingsState.setLanguages(),
-            settingsState::onLanguageClick
+            state.setLanguages(),
+            state::onLanguageClick
         )
     }
 }

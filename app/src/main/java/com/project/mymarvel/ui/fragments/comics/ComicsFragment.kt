@@ -21,7 +21,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class ComicsFragment : Fragment() {
 
     private val vm: ComicsViewModel by viewModels()
-    private lateinit var comicsState: ComicsState
+    private lateinit var state: ComicsState
 
     private lateinit var binding: FragmentComicsBinding
 
@@ -47,14 +47,14 @@ class ComicsFragment : Fragment() {
     }
 
     private fun stateHolder() {
-        comicsState = buildComicsState()
+        state = buildComicsState()
     }
 
     private fun observers() {
-        viewLifecycleOwner.launchAndCollect(vm.state) { state ->
-            state.items?.let { binding.items = it }
-            binding.events = state.events
-            binding.error = state.error?.let(comicsState::errorToString)
+        viewLifecycleOwner.launchAndCollect(vm.state) { uiState ->
+            uiState.items?.let { binding.items = it }
+            binding.events = uiState.events
+            binding.error = uiState.error?.let(state::errorToString)
         }
     }
 
