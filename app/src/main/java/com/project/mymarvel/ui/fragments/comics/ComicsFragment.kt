@@ -28,7 +28,7 @@ class ComicsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentComicsBinding.inflate(inflater, container, false)
         return binding.root
     }
