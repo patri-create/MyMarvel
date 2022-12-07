@@ -19,13 +19,12 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class SettingsFragment : Fragment() {
 
-    private lateinit var items: List<LanguageItem>
     private lateinit var binding: FragmentSettingsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentSettingsBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -36,31 +35,29 @@ class SettingsFragment : Fragment() {
     }
 
     private fun instances() {
-        setLanguages()
         configureRecyclerView()
     }
 
-
-    private fun setLanguages() {
-        items = listOf(
-            LocaleManager.ENGLISH.toLanguage(),
-            LocaleManager.SPANISH.toLanguage()
-        )
-    }
-
     private fun configureRecyclerView() {
-        binding.languageRecycler.adapter = LanguageAdapter(items, ::onLanguageClick)
+        binding.languageRecycler.adapter = LanguageAdapter(setLanguages(), ::onLanguageClick)
     }
 
     private fun loadLanguage() {
         requireActivity().recreate()
     }
 
-    private fun onLanguageClick(bin: ItemLanguageBinding, item: LanguageItem) {
-        bin.imageView.background =
+    private fun onLanguageClick(bind: ItemLanguageBinding, item: LanguageItem) {
+        bind.imageView.background =
             ContextCompat.getDrawable(requireContext(), R.drawable.language_shadow)
-        bin.titleText.setTypeface(null, Typeface.BOLD)
+        bind.titleText.setTypeface(null, Typeface.BOLD)
         LocaleManager.newInstance(requireContext()).setNewLocale(item.locale)
         loadLanguage()
+    }
+
+    private fun setLanguages(): List<LanguageItem> {
+        return listOf(
+            LocaleManager.ENGLISH.toLanguage(),
+            LocaleManager.SPANISH.toLanguage()
+        )
     }
 }
