@@ -35,4 +35,9 @@
             android:name="marvelItem"
             app:argType="com.project.mymarvel.domain.MarvelItem" />
     </fragment>
+    <fragment
+        android:id="@+id/network_dest"
+        android:name="com.project.mymarvel.ui.fragments.network.NetworkFragment"
+        android:label="@string/toolbar_network"
+        tools:layout="@layout/fragment_network" />
 </navigation>

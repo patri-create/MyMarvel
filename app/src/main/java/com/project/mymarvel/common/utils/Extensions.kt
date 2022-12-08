@@ -8,6 +8,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.SnapHelper
@@ -21,6 +22,8 @@ import com.project.mymarvel.domain.Error
 import com.project.mymarvel.domain.Language
 import com.project.mymarvel.ui.adapters.OnSnapPositionChangeListener
 import com.project.mymarvel.ui.adapters.SnapOnScrollListener
+import com.project.mymarvel.ui.base.MainActivity
+import com.project.mymarvel.ui.base.MainState
 import com.project.mymarvel.ui.fragments.comics.ComicsState
 import com.project.mymarvel.ui.fragments.home.HomeState
 import com.project.mymarvel.ui.fragments.settings.SettingsState
@@ -67,6 +70,13 @@ fun <T> LifecycleOwner.launchAndCollect(
 
 
 //region StateHolder
+fun MainActivity.buildMainState(
+    activity: MainActivity = this,
+    navController: NavController =
+        (supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment)
+            .navController
+) = MainState(activity, navController)
+
 fun Fragment.buildHomeState(
     context: Context = requireContext(),
     navController: NavController = findNavController()

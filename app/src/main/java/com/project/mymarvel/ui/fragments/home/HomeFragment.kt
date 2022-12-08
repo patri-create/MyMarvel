@@ -43,7 +43,6 @@ class HomeFragment : Fragment() {
     private fun instances() {
         stateHolder()
         observers()
-        listenSnapOnHomeRecyclerView()
         prepareRecyclerView()
         fromMenu()
     }
@@ -57,6 +56,18 @@ class HomeFragment : Fragment() {
             uiState.items?.let { binding.items = it }
             binding.events = uiState.events
             binding.error = uiState.error?.let(state::errorToString)
+        }
+
+        listenRefresh()
+        listenSnapOnHomeRecyclerView()
+    }
+
+    private fun listenRefresh() {
+        with(binding) {
+            swipeRefresh.setOnRefreshListener {
+                vm.loadMarvelItems()
+                swipeRefresh.isRefreshing = false
+            }
         }
     }
 

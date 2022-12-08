@@ -43,7 +43,6 @@ class ComicsFragment : Fragment() {
     private fun instances() {
         stateHolder()
         observers()
-        listenSnapOnHomeRecyclerView()
         prepareRecyclerView()
         fromMenu()
     }
@@ -58,8 +57,19 @@ class ComicsFragment : Fragment() {
             binding.events = uiState.events
             binding.error = uiState.error?.let(state::errorToString)
         }
+
+        listenRefresh()
+        listenSnapOnHomeRecyclerView()
     }
 
+    private fun listenRefresh() {
+        with(binding) {
+            swipeRefresh.setOnRefreshListener {
+                vm.loadMarvelItems()
+                swipeRefresh.isRefreshing = false
+            }
+        }
+    }
 
     private fun listenSnapOnHomeRecyclerView() {
         binding.mainRecycler.attachSnapHelperWithListener(

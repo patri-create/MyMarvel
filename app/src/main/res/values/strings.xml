@@ -12,6 +12,7 @@
 
     <!--    Toolbar  -->
     <string name="toolbar_detail">Detail</string>
+    <string name="toolbar_network">Network</string>
 
     <!--    Errors  -->
     <string name="error_connectivity">Connectivity error</string>
@@ -22,4 +23,9 @@
     <string name="choose_language">Choose your language</string>
     <string name="language_english">English</string>
     <string name="language_spanish">Spanish</string>
+
+    <!--    Network  -->
+    <string name="internet_connection_title">No Internet Connection</string>
+    <string name="internet_connection_description">Try to connect your device again and you will return to the app automatically</string>
+
 </resources>
