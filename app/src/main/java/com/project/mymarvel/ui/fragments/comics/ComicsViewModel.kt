@@ -26,6 +26,10 @@ class ComicsViewModel @Inject constructor(
     val state: StateFlow<UiState> = _state.asStateFlow()
 
     init {
+        loadMarvelItems()
+    }
+
+    fun loadMarvelItems() {
         viewModelScope.launch {
             findComicsUseCase().fold(::onError, ::onSuccess)
         }
@@ -37,7 +41,7 @@ class ComicsViewModel @Inject constructor(
 
     private fun onSuccess(items: List<MarvelItem>) {
         this.items = items
-        _state.value = _state.value.copy(items = items)
+        _state.value = _state.value.copy(items = items, error = null)
     }
 
     fun updateEvents(pos: Int) {
@@ -50,7 +54,7 @@ class ComicsViewModel @Inject constructor(
     }
 
     private fun onEventSuccess(items: List<EventItem>) {
-        _state.value = _state.value.copy(items = null, events = items)
+        _state.value = _state.value.copy(items = null, events = items, error = null)
     }
 
     fun reload() {
