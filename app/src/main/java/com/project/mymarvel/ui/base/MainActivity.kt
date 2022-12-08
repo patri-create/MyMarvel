@@ -1,7 +1,10 @@
 package com.project.mymarvel.ui.base
 
+import android.Manifest
 import android.content.Context
 import android.os.Bundle
+import androidx.activity.result.ActivityResultLauncher
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavController
@@ -12,8 +15,10 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.project.mymarvel.R
 import com.project.mymarvel.common.LocaleManager
+import com.project.mymarvel.common.LocationHelper
 import com.project.mymarvel.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -21,13 +26,32 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var responsePermissionRequest: ActivityResultLauncher<String>
+
+    @Inject
+    lateinit var locationHelper: LocationHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         showSplash()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        instances()
+    }
+
+    private fun instances() {
+        observers()
         configurations()
+    }
+
+    private fun observers() {
+        responsePermissionRequest = registerForActivityResult(
+            ActivityResultContracts.RequestPermission(),
+            ::checkPermissions
+        )
+        binding.toolbar.toolbarLocationIcon.setOnClickListener {
+            responsePermissionRequest.launch(Manifest.permission.ACCESS_COARSE_LOCATION)
+        }
     }
 
     private fun showSplash() {
@@ -57,6 +81,12 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         binding.navView.setupWithNavController(navController)
+    }
+
+    private fun checkPermissions(isGranted: Boolean) {
+        if (isGranted) {
+            locationHelper.getLocation { binding.toolbar.toolbarLocationText.text = it }
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
