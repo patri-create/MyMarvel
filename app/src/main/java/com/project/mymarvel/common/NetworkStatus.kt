@@ -14,18 +14,13 @@ import kotlinx.coroutines.flow.map
 import javax.inject.Inject
 import javax.inject.Singleton
 
-sealed class NetworkStatusState {
-    object Available : NetworkStatusState()
-    object Unavailable : NetworkStatusState()
-}
-
 @Singleton
 class NetworkStatus @Inject constructor(context: Context) {
 
     private val connectivityManager =
         context.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
 
-    val status = callbackFlow<NetworkStatusState> {
+    val status = callbackFlow {
         val networkStatusCallback = object : ConnectivityManager.NetworkCallback() {
             override fun onUnavailable() {
                 trySend(NetworkStatusState.Unavailable)
@@ -49,16 +44,9 @@ class NetworkStatus @Inject constructor(context: Context) {
             connectivityManager.unregisterNetworkCallback(networkStatusCallback)
         }
     } .distinctUntilChanged()
-}
 
-@FlowPreview
-inline fun <T> Flow<NetworkStatusState>.networkMap(
-    crossinline onUnavailable: suspend () -> T,
-    crossinline onAvailable: suspend () -> T,
-): Flow<T> = map { status ->
-    when (status) {
-        NetworkStatusState.Unavailable -> onUnavailable()
-        NetworkStatusState.Available -> onAvailable()
-        else -> onUnavailable()
+    sealed class NetworkStatusState {
+        object Available : NetworkStatusState()
+        object Unavailable : NetworkStatusState()
     }
 }

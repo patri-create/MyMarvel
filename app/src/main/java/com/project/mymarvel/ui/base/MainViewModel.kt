@@ -3,7 +3,7 @@ package com.project.mymarvel.ui.base
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.project.mymarvel.common.NetworkStatus
-import com.project.mymarvel.common.networkMap
+import com.project.mymarvel.common.utils.networkMap
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

@@ -18,6 +18,7 @@ import arrow.core.right
 import com.project.mymarvel.App
 import com.project.mymarvel.R
 import com.project.mymarvel.common.LocaleManager
+import com.project.mymarvel.common.NetworkStatus
 import com.project.mymarvel.domain.Error
 import com.project.mymarvel.domain.Language
 import com.project.mymarvel.ui.adapters.OnSnapPositionChangeListener
@@ -27,7 +28,9 @@ import com.project.mymarvel.ui.base.MainState
 import com.project.mymarvel.ui.fragments.comics.ComicsState
 import com.project.mymarvel.ui.fragments.home.HomeState
 import com.project.mymarvel.ui.fragments.settings.SettingsState
+import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
 import retrofit2.HttpException
 import java.io.IOException
@@ -50,6 +53,17 @@ fun Throwable.toError(): Error = when (this) {
     is IOException -> Error.Connectivity
     is HttpException -> Error.Server(code())
     else -> Error.Unknown(message ?: "")
+}
+
+@FlowPreview
+inline fun <T> Flow<NetworkStatus.NetworkStatusState>.networkMap(
+    crossinline onUnavailable: suspend () -> T,
+    crossinline onAvailable: suspend () -> T,
+): Flow<T> = map { status ->
+    when (status) {
+        NetworkStatus.NetworkStatusState.Unavailable -> onUnavailable()
+        NetworkStatus.NetworkStatusState.Available -> onAvailable()
+    }
 }
 //endregion
 
