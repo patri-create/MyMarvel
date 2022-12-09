@@ -10,6 +10,11 @@
     <string name="menu_comics">Comics</string>
     <string name="menu_settings">Settings</string>
 
+    <!--    Title screens -->
+    <string name="title_heroes">Heroes</string>
+    <string name="title_comics">Comics</string>
+    <string name="title_events">Events</string>
+
     <!--    Toolbar  -->
     <string name="toolbar_detail">Detail</string>
     <string name="toolbar_network">Network</string>
@@ -23,6 +28,9 @@
     <string name="choose_language">Choose your language</string>
     <string name="language_english">English</string>
     <string name="language_spanish">Spanish</string>
+
+    <!--    Detail  -->
+    <string name="title_description">Summary</string>
 
     <!--    Network  -->
     <string name="internet_connection_title">No Internet Connection</string>
