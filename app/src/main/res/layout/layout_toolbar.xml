@@ -5,27 +5,48 @@
     android:layout_height="wrap_content">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbar_component"
+        android:theme="@style/ToolbarTheme"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_gravity="center"
-        android:background="@color/primary_color"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:contentInsetLeft="0dp"
         app:contentInsetStart="0dp"
         app:contentInsetStartWithNavigation="0dp"
-        app:navigationIcon="@drawable/ic_hambuger"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+        app:navigationIcon="@drawable/ic_hamburger">
 
-        <TextView
-            android:id="@+id/tvToolbarTitle"
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/toolbar_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:textColor="@color/secondary_color"
             android:textSize="18sp"
-            tools:text="Home" />
+            tools:text="@string/menu_home" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/toolbar_location_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="end">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/toolbar_location_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="California, US"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/toolbar_location_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_location"/>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
 
     </androidx.appcompat.widget.Toolbar>
 

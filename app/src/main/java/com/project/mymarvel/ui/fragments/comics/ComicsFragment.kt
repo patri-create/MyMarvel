@@ -1,10 +1,10 @@
 package com.project.mymarvel.ui.fragments.comics
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearSnapHelper
 import com.project.mymarvel.R
@@ -13,6 +13,7 @@ import com.project.mymarvel.common.utils.buildComicsState
 import com.project.mymarvel.common.utils.launchAndCollect
 import com.project.mymarvel.databinding.FragmentComicsBinding
 import com.project.mymarvel.ui.adapters.MarginItemDecoration
+import com.project.mymarvel.ui.adapters.MarvelAdapter
 import com.project.mymarvel.ui.adapters.OnSnapPositionChangeListener
 import com.project.mymarvel.ui.adapters.SnapOnScrollListener
 import dagger.hilt.android.AndroidEntryPoint
@@ -21,14 +22,15 @@ import dagger.hilt.android.AndroidEntryPoint
 class ComicsFragment : Fragment() {
 
     private val vm: ComicsViewModel by viewModels()
-    private lateinit var comicsState: ComicsState
+    private lateinit var state: ComicsState
+    private val adapter = MarvelAdapter { state.onItemClick(it) }
 
     private lateinit var binding: FragmentComicsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentComicsBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -41,23 +43,33 @@ class ComicsFragment : Fragment() {
     private fun instances() {
         stateHolder()
         observers()
-        listenSnapOnHomeRecyclerView()
         prepareRecyclerView()
         fromMenu()
     }
 
     private fun stateHolder() {
-        comicsState = buildComicsState()
+        state = buildComicsState()
     }
 
     private fun observers() {
-        viewLifecycleOwner.launchAndCollect(vm.state) { state ->
-            state.items?.let { binding.items = it }
-            binding.events = state.events
-            binding.error = state.error?.let(comicsState::errorToString)
+        viewLifecycleOwner.launchAndCollect(vm.state) { uiState ->
+            uiState.items?.let { binding.items = it }
+            binding.events = uiState.events
+            binding.error = uiState.error?.let(state::errorToString)
         }
+
+        listenRefresh()
+        listenSnapOnHomeRecyclerView()
     }
 
+    private fun listenRefresh() {
+        with(binding) {
+            swipeRefresh.setOnRefreshListener {
+                vm.loadMarvelItems()
+                swipeRefresh.isRefreshing = false
+            }
+        }
+    }
 
     private fun listenSnapOnHomeRecyclerView() {
         binding.mainRecycler.attachSnapHelperWithListener(
@@ -73,6 +85,7 @@ class ComicsFragment : Fragment() {
 
     private fun prepareRecyclerView() {
         with(binding) {
+            mainRecycler.adapter = adapter
             mainRecycler.addItemDecoration(MarginItemDecoration(resources.getDimensionPixelSize(R.dimen.margin)))
             eventRecycler.addItemDecoration(MarginItemDecoration(resources.getDimensionPixelSize(R.dimen.margin)))
         }

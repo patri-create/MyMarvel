@@ -1,0 +1,2028 @@
+{
+  "code": 200,
+  "status": "Ok",
+  "copyright": "© 2022 MARVEL",
+  "attributionText": "Data provided by Marvel. © 2022 MARVEL",
+  "attributionHTML": "<a href=\"http://marvel.com\">Data provided by Marvel. © 2022 MARVEL</a>",
+  "etag": "745923c2396de6e3388766457e5f261a763bca9c",
+  "data": {
+    "offset": 0,
+    "limit": 20,
+    "total": 4,
+    "count": 4,
+    "results": [
+      {
+        "id": 238,
+        "title": "Civil War",
+        "description": "After a horrific tragedy raises questions on whether or not super heroes should register with the government, longtime Avengers teammates Captain America and Iron Man end up on opposite sides of the argument! Writer Mark Millar and artist Steve McNiven split the Marvel Universe in two as friend fights friend in one of the most celebrated and successful events of all-time!",
+        "resourceURI": "http://gateway.marvel.com/v1/public/events/238",
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/events/238/civil_war?utm_campaign=apiRef&utm_source=fe9b1973df204043fa80e7c57bc49afa"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Civil_War?utm_campaign=apiRef&utm_source=fe9b1973df204043fa80e7c57bc49afa"
+          }
+        ],
+        "modified": "2013-11-07T10:40:01-0500",
+        "start": "2006-07-01 00:00:00",
+        "end": "2007-01-29 00:00:00",
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/d0/51cb5356c2063",
+          "extension": "jpg"
+        },
+        "creators": {
+          "available": 138,
+          "collectionURI": "http://gateway.marvel.com/v1/public/events/238/creators",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/807",
+              "name": "Comicraft",
+              "role": "letterer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/452",
+              "name": "Virtual Calligr",
+              "role": "letterer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/5251",
+              "name": "Vc Joe Caramagna",
+              "role": "letterer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/12401",
+              "name": "Sotocolor",
+              "role": "colorist"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/598",
+              "name": "Brad Anderson",
+              "role": "colorist"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/191",
+              "name": "Kaare Andrews",
+              "role": "colorist"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/11543",
+              "name": "Dan Brown",
+              "role": "colorist"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/11401",
+              "name": "Various",
+              "role": "penciller (cover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/5268",
+              "name": "Jim Calafiore",
+              "role": "penciller (cover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/666",
+              "name": "Roberto Campus",
+              "role": "penciller (cover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/13661",
+              "name": "Roberto Aguirre-Sacasa",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/24",
+              "name": "Brian Michael Bendis",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/367",
+              "name": "Ed Brubaker",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/887",
+              "name": "Ronald Byrd",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/4014",
+              "name": "Axel Alonso",
+              "role": "editor"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/11854",
+              "name": "Nicole Boose",
+              "role": "editor"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/12741",
+              "name": "Ramon Bachs",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/970",
+              "name": "Dennis Calero",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/1141",
+              "name": "Giuseppe Camuncoli",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/13215",
+              "name": "Rain Beredo",
+              "role": "colorist (cover)"
+            }
+          ],
+          "returned": 20
+        },
+        "characters": {
+          "available": 101,
+          "collectionURI": "http://gateway.marvel.com/v1/public/events/238/characters",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009148",
+              "name": "Absorbing Man"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009740",
+              "name": "Arnim Zola"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009165",
+              "name": "Avengers"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009175",
+              "name": "Beast"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009182",
+              "name": "Bishop"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009184",
+              "name": "Black Bolt"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009185",
+              "name": "Black Cat"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009187",
+              "name": "Black Panther"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009191",
+              "name": "Blade"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009198",
+              "name": "Blizzard"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010371",
+              "name": "Boomerang"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009212",
+              "name": "Bullseye"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009214",
+              "name": "Cable"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1017317",
+              "name": "Cable (Deadpool)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009220",
+              "name": "Captain America"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010338",
+              "name": "Captain Marvel (Carol Danvers)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009234",
+              "name": "Chameleon"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010754",
+              "name": "Chase Stein"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009241",
+              "name": "Cloak"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010676",
+              "name": "Colleen Wing"
+            }
+          ],
+          "returned": 20
+        },
+        "stories": {
+          "available": 321,
+          "collectionURI": "http://gateway.marvel.com/v1/public/events/238/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/543",
+              "name": "Interior #543",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/956",
+              "name": "1 of ?",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/957",
+              "name": "1 of ?",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/958",
+              "name": "2 of ?",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/959",
+              "name": "2 of ?",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/960",
+              "name": "3 of ?",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/961",
+              "name": "3 of ?",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/962",
+              "name": "2 of 6 - Civil War",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/963",
+              "name": "2 of 6 - Civil War",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/964",
+              "name": "3 of 6 - Civil War",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/965",
+              "name": "3 of 6 - Civil War",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/966",
+              "name": "4 of 6 - Civil War",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/967",
+              "name": "4 of 6 - Civil War",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/968",
+              "name": "5 of 6 - Civil War",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/969",
+              "name": "5 of 6 - Civil War",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/971",
+              "name": "4 of 6 - Civil War",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/972",
+              "name": "6 of 6 - Civil War (45th Anniversary)",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/973",
+              "name": "6 of 6 - Civil War (45th Anniversary)",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/1183",
+              "name": "Amazing Spider-Man (1999) #529",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/1184",
+              "name": "1 of 5 - Identity Thief",
+              "type": "interiorStory"
+            }
+          ],
+          "returned": 20
+        },
+        "comics": {
+          "available": 140,
+          "collectionURI": "http://gateway.marvel.com/v1/public/events/238/comics",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/3537",
+              "name": "Amazing Spider-Man (1999) #529"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/3942",
+              "name": "Amazing Spider-Man (1999) #530"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/4065",
+              "name": "Amazing Spider-Man (1999) #531"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/4177",
+              "name": "Amazing Spider-Man (1999) #532"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/4277",
+              "name": "Amazing Spider-Man (1999) #533"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/4431",
+              "name": "Amazing Spider-Man (1999) #534"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/4806",
+              "name": "Amazing Spider-Man (1999) #535"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/5094",
+              "name": "Amazing Spider-Man (1999) #536"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/5245",
+              "name": "Amazing Spider-Man (1999) #537"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/5808",
+              "name": "Amazing Spider-Man (1999) #538"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/4425",
+              "name": "Black Panther (2005) #18"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/5243",
+              "name": "Black Panther (2005) #21"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/5408",
+              "name": "Black Panther (2005) #22"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/5667",
+              "name": "Black Panther (2005) #23"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/5805",
+              "name": "Black Panther (2005) #24"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/6047",
+              "name": "Black Panther (2005) #25"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/13513",
+              "name": "Black Panther: Civil War (Trade Paperback)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/5849",
+              "name": "Blade (2006) #5"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/4450",
+              "name": "Cable & Deadpool (2004) #30"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/4803",
+              "name": "Cable & Deadpool (2004) #31"
+            }
+          ],
+          "returned": 20
+        },
+        "series": {
+          "available": 62,
+          "collectionURI": "http://gateway.marvel.com/v1/public/events/238/series",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/454",
+              "name": "Amazing Spider-Man (1999 - 2013)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/784",
+              "name": "Black Panther (2005 - 2008)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/2226",
+              "name": "Black Panther: Civil War (2007)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/1123",
+              "name": "Blade (2006 - 2007)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/693",
+              "name": "Cable & Deadpool (2004 - 2008)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/832",
+              "name": "Captain America (2004 - 2011)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/1067",
+              "name": "Civil War (2006 - 2007)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/1893",
+              "name": "Civil War (2007)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/6208",
+              "name": "Civil War (2006 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/1101",
+              "name": "Civil War Files (2006)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/6248",
+              "name": "CIVIL WAR HC [DM ONLY] (2008 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/1900",
+              "name": "Civil War: Amazing Spider-Man (2007)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/1871",
+              "name": "Civil War: Battle Damage Report (2007)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/2256",
+              "name": "Civil War: Captain America (2007)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/2316",
+              "name": "Civil War: Choosing Sides (2006)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/1898",
+              "name": "Civil War: Fantastic Four (2007)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/10102",
+              "name": "Civil War: Fantastic Four (2010)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/1109",
+              "name": "Civil War: Front Line (2006 - 2007)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/11636",
+              "name": "Civil War: Front Line (2010 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/1964",
+              "name": "Civil War: Front Line Book 1 (2007)"
+            }
+          ],
+          "returned": 20
+        },
+        "next": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/events/255",
+          "name": "Initiative"
+        },
+        "previous": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/events/212",
+          "name": "Planet Hulk"
+        }
+      },
+      {
+        "id": 302,
+        "title": "Fear Itself",
+        "description": "The Serpent, God of Fear and brother to the Allfather Odin, rises to challenge Earthâ€™s Mightiest in a seven-issue event written by Matt Fraction with art by Stuart Immonen! As the Worthy, heralds of the Serpent, lay waste to the Marvel Universe, how can Thor, Captain America, Iron Man and the Avengers turn back the tide of fear?",
+        "resourceURI": "http://gateway.marvel.com/v1/public/events/302",
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/events/302/fear_itself?utm_campaign=apiRef&utm_source=fe9b1973df204043fa80e7c57bc49afa"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Fear_Itself?utm_campaign=apiRef&utm_source=fe9b1973df204043fa80e7c57bc49afa"
+          }
+        ],
+        "modified": "2013-06-21T11:17:51-0400",
+        "start": "2011-04-16 00:00:00",
+        "end": "2011-10-18 00:00:00",
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/03/51099f8823d43",
+          "extension": "jpg"
+        },
+        "creators": {
+          "available": 179,
+          "collectionURI": "http://gateway.marvel.com/v1/public/events/302/creators",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/807",
+              "name": "Comicraft",
+              "role": "letterer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/4992",
+              "name": "Simon Bowland",
+              "role": "letterer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/1107",
+              "name": "Dan Abnett",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/24",
+              "name": "Brian Michael Bendis",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/11482",
+              "name": "Jesus Aburtov",
+              "role": "colorist"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/9628",
+              "name": "Ulises Arreola",
+              "role": "colorist"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/13309",
+              "name": "Elizabeth Dismang Breitweiser",
+              "role": "colorist"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/4201",
+              "name": "Bob Almond",
+              "role": "inker"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/11491",
+              "name": "Michael Babinski",
+              "role": "inker"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/4014",
+              "name": "Axel Alonso",
+              "role": "editor"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/8000",
+              "name": "Alejandro Arbona",
+              "role": "editor"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/8204",
+              "name": "Charlie Beckerman",
+              "role": "editor"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/1040",
+              "name": "Jay Anacleto",
+              "role": "penciller (cover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/648",
+              "name": "Simone Bianchi",
+              "role": "penciller (cover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/232",
+              "name": "Chris Bachalo",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/4574",
+              "name": "Ryan Bodenheim",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/10087",
+              "name": "Elia Bonetti",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/9371",
+              "name": "Roland Boschi",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/128",
+              "name": "Doug Braithwaite",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/13215",
+              "name": "Rain Beredo",
+              "role": "artist"
+            }
+          ],
+          "returned": 20
+        },
+        "characters": {
+          "available": 157,
+          "collectionURI": "http://gateway.marvel.com/v1/public/events/302/characters",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009148",
+              "name": "Absorbing Man"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010370",
+              "name": "Alpha Flight"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011227",
+              "name": "Amadeus Cho"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009153",
+              "name": "Angel (Warren Worthington III)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010802",
+              "name": "Ant-Man (Eric O'Grady)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010801",
+              "name": "Ant-Man (Scott Lang)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009159",
+              "name": "Archangel"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011758",
+              "name": "Attuma"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009163",
+              "name": "Aurora"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009165",
+              "name": "Avengers"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011456",
+              "name": "Balder"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011785",
+              "name": "Battlestar"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009175",
+              "name": "Beast"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009187",
+              "name": "Black Panther"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009189",
+              "name": "Black Widow"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011339",
+              "name": "Blue Marvel"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011236",
+              "name": "Bride of Nine Spiders (Immortal Weapons)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009167",
+              "name": "Bruce Banner"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009220",
+              "name": "Captain America"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010338",
+              "name": "Captain Marvel (Carol Danvers)"
+            }
+          ],
+          "returned": 20
+        },
+        "stories": {
+          "available": 189,
+          "collectionURI": "http://gateway.marvel.com/v1/public/events/302/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/63589",
+              "name": "Avengers (2010) #13",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/63590",
+              "name": "Avengers (2010) #13",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/63591",
+              "name": "Avengers (2010) #14",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/63592",
+              "name": "Interior #63592",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/63593",
+              "name": "Avengers (2010) #15",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/63594",
+              "name": "Avengers (2010) #15",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/63595",
+              "name": "Avengers (2010) #16",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/63596",
+              "name": "Avengers (2010) #16",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/63597",
+              "name": "Avengers (2010) #17",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/63598",
+              "name": "Avengers (2010) #17",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/64682",
+              "name": "HERC 3 (FI)",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/64683",
+              "name": "HERC 3 (FI)",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/64684",
+              "name": "Hercules (2010) #4",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/64685",
+              "name": "Hercules (2010) #4",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/64686",
+              "name": "Cover #64686",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/64687",
+              "name": "Interior #64687",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/64688",
+              "name": "Cover #64688",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/64689",
+              "name": "Interior #64689",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/64734",
+              "name": "IRON MAN 2.0 (2011) #5",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/64735",
+              "name": "Iron Man 2.0 (2011) #5",
+              "type": "interiorStory"
+            }
+          ],
+          "returned": 20
+        },
+        "comics": {
+          "available": 89,
+          "collectionURI": "http://gateway.marvel.com/v1/public/events/302/comics",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/38570",
+              "name": "Alpha Flight (2011) #1"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/38569",
+              "name": "Alpha Flight (2011) #2"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/38565",
+              "name": "Alpha Flight (2011) #3"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/38567",
+              "name": "Alpha Flight (2011) #4"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/29199",
+              "name": "Avengers (2010) #13"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/29200",
+              "name": "Avengers (2010) #14"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/29201",
+              "name": "Avengers (2010) #15"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/29202",
+              "name": "Avengers (2010) #16"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/29203",
+              "name": "Avengers (2010) #17"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/36483",
+              "name": "Avengers Academy (2010) #13"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/36478",
+              "name": "Avengers Academy (2010) #14"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/36482",
+              "name": "Avengers Academy (2010) #15"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/36481",
+              "name": "Avengers Academy (2010) #16"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/36480",
+              "name": "Avengers Academy (2010) #17"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/36479",
+              "name": "Avengers Academy (2010) #18"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/36484",
+              "name": "Avengers Academy (2010) #19"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/36785",
+              "name": "Black Panther: The Man Without Fear (2010) #521"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/36787",
+              "name": "Black Panther: The Man Without Fear (2010) #522"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/36786",
+              "name": "Black Panther: The Man Without Fear (2010) #523"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/35769",
+              "name": "Captain America (2004) #619"
+            }
+          ],
+          "returned": 20
+        },
+        "series": {
+          "available": 32,
+          "collectionURI": "http://gateway.marvel.com/v1/public/events/302/series",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/13907",
+              "name": "Alpha Flight (2011 - 2012)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/9085",
+              "name": "Avengers (2010 - 2012)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/9086",
+              "name": "Avengers Academy (2010 - 2012)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/15691",
+              "name": "Black Panther: The Man Without Fear (2010 - 2011)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/832",
+              "name": "Captain America (2004 - 2011)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/13691",
+              "name": "Fear Itself (2010 - 2011)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/14104",
+              "name": "Fear Itself: Black Widow (2011)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/14022",
+              "name": "Fear Itself: Fearsome Four (2011)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/14800",
+              "name": "Fear Itself: Monkey King (2011)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/13858",
+              "name": "Fear Itself: Sin's Past (2011)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/13854",
+              "name": "Fear Itself: Spider-Man (2011)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/14589",
+              "name": "Fear Itself: Spider-Man (2011 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/14563",
+              "name": "Fear Itself: The Deep (2011 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/14059",
+              "name": "Fear Itself: The Deep (2011)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/13881",
+              "name": "Fear Itself: The Home Front (2010)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/14151",
+              "name": "Fear Itself: Uncanny X-Force (2011)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/14065",
+              "name": "Fear Itself: Wolverine (2011)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/13855",
+              "name": "Fear Itself: Youth in Revolt (2011)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/14018",
+              "name": "Ghost Rider (2011 - 2012)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/9898",
+              "name": "Herc (2010 - 2011)"
+            }
+          ],
+          "returned": 20
+        },
+        "next": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/events/306",
+          "name": "X-Men: Schism"
+        },
+        "previous": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/events/303",
+          "name": "Age of X"
+        }
+      },
+      {
+        "id": 270,
+        "title": "Secret Wars",
+        "description": "The most powerful heroes and villains in the Marvel Universe square off on Battleword with the victor promised their greatest dreams and desires! Writer Jim Shooter and artists Mike Zeck and Bob Layton introduce the Beyonder in a 12-issue event featuring the Avengers, the X-Men, the Fantastic Four, Spider-Man, Magneto, Doctor Doom and more!",
+        "resourceURI": "http://gateway.marvel.com/v1/public/events/270",
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/events/270/secret_wars?utm_campaign=apiRef&utm_source=fe9b1973df204043fa80e7c57bc49afa"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Secret_Wars?utm_campaign=apiRef&utm_source=fe9b1973df204043fa80e7c57bc49afa"
+          }
+        ],
+        "modified": "2013-06-28T16:01:30-0400",
+        "start": "1984-05-10 00:00:00",
+        "end": "2008-12-17 00:00:00",
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/f/00/51cdeb7048dac",
+          "extension": "jpg"
+        },
+        "creators": {
+          "available": 70,
+          "collectionURI": "http://gateway.marvel.com/v1/public/events/270/creators",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/2929",
+              "name": "Steacy",
+              "role": "penciller (cover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/12208",
+              "name": "Arthur Adams",
+              "role": "penciller (cover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/2926",
+              "name": "Talaoc",
+              "role": "inker"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/11063",
+              "name": "Terry Kevin Austin",
+              "role": "inker"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/1074",
+              "name": "Eduardo Barreto",
+              "role": "inker"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/2077",
+              "name": "Hilary Barta",
+              "role": "inker"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/2038",
+              "name": "John Beatty",
+              "role": "inker"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/1251",
+              "name": "Brett Breeding",
+              "role": "inker"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/5823",
+              "name": "Danilo Bulanadi",
+              "role": "inker"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/1827",
+              "name": "John Byrne",
+              "role": "inker"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/1295",
+              "name": "Mike Esposito",
+              "role": "inker"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/1865",
+              "name": "Diana Albers",
+              "role": "letterer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/1887",
+              "name": "Janice Chiang",
+              "role": "letterer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/87",
+              "name": "Mark Bagley",
+              "role": "artist"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/1935",
+              "name": "Paul Becton",
+              "role": "colorist"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/105",
+              "name": "Sal Buscema",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/44",
+              "name": "Chris Claremont",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/9565",
+              "name": "Tom Defalco",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/13183",
+              "name": "J.M. DeMatteis",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/829",
+              "name": "Jay Faerber",
+              "role": "writer"
+            }
+          ],
+          "returned": 20
+        },
+        "characters": {
+          "available": 64,
+          "collectionURI": "http://gateway.marvel.com/v1/public/events/270/characters",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009148",
+              "name": "Absorbing Man"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009151",
+              "name": "Amiko"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009164",
+              "name": "Avalanche"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009165",
+              "name": "Avengers"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011138",
+              "name": "Beyonder"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009185",
+              "name": "Black Cat"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009189",
+              "name": "Black Widow"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009199",
+              "name": "Blob"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009216",
+              "name": "Caliban"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009220",
+              "name": "Captain America"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009224",
+              "name": "Captain Marvel (Mar-Vell)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011095",
+              "name": "Captain Marvel (Monica Rambeau)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009733",
+              "name": "Charles Xavier"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009243",
+              "name": "Colossus"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009244",
+              "name": "Curt Conners"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009257",
+              "name": "Cyclops"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009262",
+              "name": "Daredevil"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009271",
+              "name": "Destiny"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009281",
+              "name": "Doctor Doom"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009276",
+              "name": "Doctor Octopus"
+            }
+          ],
+          "returned": 20
+        },
+        "stories": {
+          "available": 101,
+          "collectionURI": "http://gateway.marvel.com/v1/public/events/270/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/12799",
+              "name": "Cover #12799",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/12800",
+              "name": "The House That Reed Built",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/12801",
+              "name": "Home Are The Heroes",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/13885",
+              "name": "Amazing Spider-Man (1963) #250",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/13886",
+              "name": "",
+              "type": ""
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/13887",
+              "name": "Amazing Spider-Man (1963) #251",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/13888",
+              "name": "Amazing Spider-Man (1963) #252",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/13889",
+              "name": "Homecoming",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/14757",
+              "name": "Avengers (1963) #240",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/14758",
+              "name": "The Ghost of Jessica Drew",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/14759",
+              "name": "Avengers (1963) #241",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/14760",
+              "name": "Dark Angel",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/14761",
+              "name": "Avengers (1963) #242",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/14762",
+              "name": "Easy Come, Easy Go",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/14763",
+              "name": "Avengers (1963) #243",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/14764",
+              "name": "Chain of Command",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/17065",
+              "name": "",
+              "type": ""
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/17066",
+              "name": "This Secret Love",
+              "type": ""
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/17849",
+              "name": "Cover #17849",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/17850",
+              "name": "An American Christmas",
+              "type": "interiorStory"
+            }
+          ],
+          "returned": 20
+        },
+        "comics": {
+          "available": 41,
+          "collectionURI": "http://gateway.marvel.com/v1/public/events/270/comics",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/7109",
+              "name": "Avengers (1963) #240"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/7110",
+              "name": "Avengers (1963) #241"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/7111",
+              "name": "Avengers (1963) #242"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/7112",
+              "name": "Avengers (1963) #243"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/7673",
+              "name": "Captain America (1968) #292"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/13078",
+              "name": "Fantastic Four (1961) #265"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/9105",
+              "name": "Incredible Hulk (1962) #294"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/9106",
+              "name": "Incredible Hulk (1962) #295"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/9418",
+              "name": "Iron Man (1968) #181"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/9419",
+              "name": "Iron Man (1968) #182"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/9420",
+              "name": "Iron Man (1968) #183"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/19622",
+              "name": "Marvel Team-Up (1972) #141"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/10348",
+              "name": "New Mutants (1983) #13"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/14793",
+              "name": "Peter Parker, the Spectacular Spider-Man (1976) #89"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/18953",
+              "name": "Quasar (1989) #8"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/2270",
+              "name": "SECRET WARS TPB (Trade Paperback)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/23037",
+              "name": "Secret Wars (Hardcover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/10580",
+              "name": "Secret Wars (1984) #1"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/10584",
+              "name": "Secret Wars (1984) #2"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/10585",
+              "name": "Secret Wars (1984) #3"
+            }
+          ],
+          "returned": 20
+        },
+        "series": {
+          "available": 17,
+          "collectionURI": "http://gateway.marvel.com/v1/public/events/270/series",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/1991",
+              "name": "Avengers (1963 - 1996)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/1996",
+              "name": "Captain America (1968 - 1996)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/2121",
+              "name": "Fantastic Four (1961 - 1998)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/2021",
+              "name": "Incredible Hulk (1962 - 1999)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/2029",
+              "name": "Iron Man (1968 - 1996)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/3716",
+              "name": "Marvel Team-Up (1972 - 1985)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/2055",
+              "name": "New Mutants (1983 - 1991)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/2271",
+              "name": "Peter Parker, the Spectacular Spider-Man (1976 - 1998)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/3695",
+              "name": "Quasar (1989 - 1994)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/6453",
+              "name": "Secret Wars (2008 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/2063",
+              "name": "Secret Wars (1984 - 1985)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/6232",
+              "name": "Secret Wars Omnibus (2008 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/1582",
+              "name": "SECRET WARS TPB (2005)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/1987",
+              "name": "The Amazing Spider-Man (1963 - 1998)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/3667",
+              "name": "Thing (1983 - 1986)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/2083",
+              "name": "Thor (1966 - 1996)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/2258",
+              "name": "Uncanny X-Men (1963 - 2011)"
+            }
+          ],
+          "returned": 17
+        },
+        "next": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/events/271",
+          "name": "Secret Wars II"
+        },
+        "previous": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/events/337",
+          "name": "Monsters Unleashed"
+        }
+      },
+      {
+        "id": 273,
+        "title": "Siege",
+        "description": "When Norman Osborn gathers his evil Cabal to attack Asgard, Captain America leads the Avengers to end the Dark Reign! In a four-issue event written by Brian Michael Bendis with art by Olivier Coipel, Earth's Mightiest reunite to oppose their dark counterparts and kick start a Heroic Age!",
+        "resourceURI": "http://gateway.marvel.com/v1/public/events/273",
+        "urls": [
+          {
+            "type": "detail",
+            "url": "http://marvel.com/comics/events/273/siege?utm_campaign=apiRef&utm_source=fe9b1973df204043fa80e7c57bc49afa"
+          },
+          {
+            "type": "wiki",
+            "url": "http://marvel.com/universe/Siege?utm_campaign=apiRef&utm_source=fe9b1973df204043fa80e7c57bc49afa"
+          }
+        ],
+        "modified": "2013-07-01T22:16:04-0400",
+        "start": "2009-12-06 00:00:00",
+        "end": "2010-05-19 00:00:00",
+        "thumbnail": {
+          "path": "http://i.annihil.us/u/prod/marvel/i/mg/2/f0/5109a26a41b77",
+          "extension": "jpg"
+        },
+        "creators": {
+          "available": 115,
+          "collectionURI": "http://gateway.marvel.com/v1/public/events/273/creators",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/807",
+              "name": "Comicraft",
+              "role": "letterer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/5251",
+              "name": "Vc Joe Caramagna",
+              "role": "letterer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/11401",
+              "name": "Various",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/9018",
+              "name": "Mahmud Asrar",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/7546",
+              "name": "Guisseppe Cammuncoli",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/6170",
+              "name": "Olivier Coipel",
+              "role": "penciller"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/1004",
+              "name": "Daniel Acuna",
+              "role": "inker (cover)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/9378",
+              "name": "Rommel Alama",
+              "role": "other"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/128",
+              "name": "Doug Braithwaite",
+              "role": "other"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/452",
+              "name": "Virtual Calligr",
+              "role": "other"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/1067",
+              "name": "Madison Carter",
+              "role": "other"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/4994",
+              "name": "Kalman Andrasofszky",
+              "role": "colorist"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/13215",
+              "name": "Rain Beredo",
+              "role": "colorist"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/562",
+              "name": "Tom Chu",
+              "role": "colorist"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/232",
+              "name": "Chris Bachalo",
+              "role": "artist"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/24",
+              "name": "Brian Michael Bendis",
+              "role": "writer"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/9368",
+              "name": "Roger Bonet",
+              "role": "inker"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/10091",
+              "name": "Rebecca Buchman",
+              "role": "inker"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/1141",
+              "name": "Giuseppe Camuncoli",
+              "role": "inker"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/creators/2133",
+              "name": "Tom Brevoort",
+              "role": "editor"
+            }
+          ],
+          "returned": 20
+        },
+        "characters": {
+          "available": 71,
+          "collectionURI": "http://gateway.marvel.com/v1/public/events/273/characters",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009148",
+              "name": "Absorbing Man"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011227",
+              "name": "Amadeus Cho"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010802",
+              "name": "Ant-Man (Eric O'Grady)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009165",
+              "name": "Avengers"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011456",
+              "name": "Balder"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1010829",
+              "name": "Bengal"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009220",
+              "name": "Captain America"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009245",
+              "name": "Constrictor"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009257",
+              "name": "Cyclops"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009453",
+              "name": "Dani Moonstar"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009262",
+              "name": "Daredevil"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011367",
+              "name": "Dark Avengers"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009274",
+              "name": "Diamondback (Rachel Leighton)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011072",
+              "name": "Edwin Jarvis"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009310",
+              "name": "Emma Frost"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009299",
+              "name": "Fantastic Four"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009316",
+              "name": "Gauntlet (Joseph Green)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011435",
+              "name": "Green Goblin (Norman Osborn)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1011490",
+              "name": "Hank Pym"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/characters/1009338",
+              "name": "Hawkeye"
+            }
+          ],
+          "returned": 20
+        },
+        "stories": {
+          "available": 136,
+          "collectionURI": "http://gateway.marvel.com/v1/public/events/273/stories",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/26180",
+              "name": "Cover #26180",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/51390",
+              "name": "Cover #51390",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/51391",
+              "name": "Interior #51391",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/53346",
+              "name": "1 of 1",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/53347",
+              "name": "1 of 1",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/54847",
+              "name": "Cover #54847",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/54848",
+              "name": "Interior #54848",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/55081",
+              "name": "Cover #55081",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/55082",
+              "name": "Interior #55082",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/55083",
+              "name": "Cover #55083",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/55084",
+              "name": "Interior #55084",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/57042",
+              "name": "Cover #57042",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/57043",
+              "name": "Interior #57043",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/57239",
+              "name": "Cover #57239",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/57240",
+              "name": "Interior #57240",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/57241",
+              "name": "Cover #57241",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/57242",
+              "name": "Interior #57242",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/57336",
+              "name": "Interior #57336",
+              "type": "interiorStory"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/58309",
+              "name": "Cover #58309",
+              "type": "cover"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/stories/58310",
+              "name": "Interior #58310",
+              "type": "interiorStory"
+            }
+          ],
+          "returned": 20
+        },
+        "comics": {
+          "available": 67,
+          "collectionURI": "http://gateway.marvel.com/v1/public/events/273/comics",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/27548",
+              "name": "Avengers: The Initiative (2007) #31"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/27549",
+              "name": "Avengers: The Initiative (2007) #32"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/29816",
+              "name": "Avengers: The Initiative (2007) #33"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/29817",
+              "name": "Avengers: The Initiative (2007) #34"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/29931",
+              "name": "Avengers: The Initiative (2007) #35"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/23175",
+              "name": "Dark Avengers (2009) #1"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/29594",
+              "name": "Dark Avengers (2009) #13"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/29595",
+              "name": "Dark Avengers (2009) #14"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/29596",
+              "name": "Dark Avengers (2009) #15"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/29933",
+              "name": "Dark Avengers (2009) #16"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/24809",
+              "name": "Dark Avengers Annual (2009) #1"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/24059",
+              "name": "Dark Reign: The Cabal (2009) #1"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/26500",
+              "name": "Dark Reign: The Goblin Legacy (2009) #1"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/27420",
+              "name": "Dark Reign: The List - Avengers (2009) #1"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/24925",
+              "name": "Dark Wolverine (2009) #82"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/24926",
+              "name": "Dark Wolverine (2009) #83"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/30384",
+              "name": "Dark Wolverine (2009) #84"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/25976",
+              "name": "The Mighty Avengers (2007) #32"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/25977",
+              "name": "The Mighty Avengers (2007) #33"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/comics/29288",
+              "name": "The Mighty Avengers (2007) #34"
+            }
+          ],
+          "returned": 20
+        },
+        "series": {
+          "available": 39,
+          "collectionURI": "http://gateway.marvel.com/v1/public/events/273/series",
+          "items": [
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/1945",
+              "name": "Avengers: The Initiative (2007 - 2010)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/6599",
+              "name": "Dark Avengers (2009 - 2010)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/7676",
+              "name": "Dark Avengers Annual (2009)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/7239",
+              "name": "Dark Reign: The Cabal (2009)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/8350",
+              "name": "Dark Reign: The Goblin Legacy (2009)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/9105",
+              "name": "Dark Reign: The List - Avengers (2009)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/7707",
+              "name": "Dark Wolverine (2009 - 2010)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/753",
+              "name": "New Avengers (2004 - 2010)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/8140",
+              "name": "New Avengers Annual (2009)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/9720",
+              "name": "New Avengers Finale (2010)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/7455",
+              "name": "New Mutants (2009 - 2012)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/9174",
+              "name": "Origins of Siege (2009)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/12348",
+              "name": "Sentry: Fallen Sun (2010)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/9178",
+              "name": "Siege (2009)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/9576",
+              "name": "Siege (2010)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/9117",
+              "name": "Siege Prologue (2009 - Present)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/9388",
+              "name": "Siege: Avengers - The Initiative (2010)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/9371",
+              "name": "Siege: Battlefield (2010)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/9749",
+              "name": "Siege: Captain America (2010)"
+            },
+            {
+              "resourceURI": "http://gateway.marvel.com/v1/public/series/10121",
+              "name": "Siege: Dark Avengers (2010)"
+            }
+          ],
+          "returned": 20
+        },
+        "next": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/events/295",
+          "name": "Realm of Kings"
+        },
+        "previous": {
+          "resourceURI": "http://gateway.marvel.com/v1/public/events/297",
+          "name": "Fall of the Hulks"
+        }
+      }
+    ]
+  }
+}

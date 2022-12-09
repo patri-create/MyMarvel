@@ -3,10 +3,10 @@ import com.project.mymarvel.buildsrc.Libs
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
-    id 'kotlin-kapt'
     id 'org.jetbrains.kotlin.kapt'
     id 'androidx.navigation.safeargs.kotlin'
     id 'dagger.hilt.android.plugin'
+    id 'kotlin-kapt'
 }
 
 def propertiesFile = rootProject.file("local.properties").newDataInputStream()
@@ -19,12 +19,12 @@ android {
 
     defaultConfig {
         applicationId "com.project.mymarvel"
-        minSdk 21
+        minSdk 29
         targetSdk 32
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.project.mymarvel.di.HiltTestRunner"
     }
 
     bundle {
@@ -51,10 +51,12 @@ android {
                 minifyEnabled false
                 debuggable false
                 proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+                manifestPlaceholders = [clearTraffic: false]
             }
 
             debug {
                 debuggable true
+                manifestPlaceholders = [clearTraffic: true]
             }
         }
 
@@ -72,6 +74,15 @@ android {
             dataBinding = true
         }
     }
+    sourceSets {
+        test {
+            java.srcDirs += "$projectDir/src/testShared/java"
+        }
+
+        androidTest {
+            java.srcDirs += "$projectDir/src/testShared/java"
+        }
+    }
 }
 
 dependencies {
@@ -79,6 +90,7 @@ dependencies {
     implementation project(":data")
     implementation project(":domain")
     implementation project(":usecases")
+    implementation project(":testSamples")
 
     /* Kotlin */
     implementation Libs.Kotlin.Coroutines.core
@@ -131,9 +143,23 @@ dependencies {
     implementation Libs.Hilt.android
     kapt Libs.Hilt.compiler
 
+    /* Location Services */
+    implementation Libs.playServicesLocation
+
     /* Test */
+    testImplementation Libs.JUnit.junit
+    testImplementation Libs.Mockito.kotlin
+    testImplementation Libs.Mockito.inline
+    testImplementation Libs.Kotlin.Coroutines.test
+    testImplementation Libs.Turbine.turbine
+
     androidTestImplementation Libs.AndroidX.Test.Ext.junit
     androidTestImplementation Libs.AndroidX.Test.Espresso.contrib
     androidTestImplementation Libs.AndroidX.Test.runner
     androidTestImplementation Libs.AndroidX.Test.rules
+    androidTestImplementation Libs.Hilt.test
+    androidTestImplementation Libs.Kotlin.Coroutines.test
+    kaptAndroidTest Libs.Hilt.compiler
+
+    androidTestImplementation Libs.OkHttp3.mockWebServer
 }

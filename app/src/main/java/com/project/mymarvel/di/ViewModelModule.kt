@@ -13,7 +13,7 @@ import dagger.hilt.android.scopes.ViewModelScoped
 
 @Module
 @InstallIn(ViewModelComponent::class)
-object UseCaseModule {
+object ViewModelModule {
 
     @Provides
     @ViewModelScoped

@@ -36,7 +36,10 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun providesOkHttpClient(httpLoggingInterceptor: HttpLoggingInterceptor, @ApiKeyInterceptorOkHttpClient networkInterceptor: Interceptor): OkHttpClient =
+    fun providesOkHttpClient(
+        httpLoggingInterceptor: HttpLoggingInterceptor,
+        @ApiKeyInterceptorOkHttpClient networkInterceptor: Interceptor
+    ): OkHttpClient =
         OkHttpClient
             .Builder()
             .addInterceptor(httpLoggingInterceptor)
@@ -47,11 +50,16 @@ object NetworkModule {
             .hostnameVerifier(org.apache.http.conn.ssl.SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER)
             .build()
 
+    @Provides
+    @Singleton
+    @ApiUrl
+    fun provideApiUrl(): String = BuildConfig.BASE_URL
+
     @Singleton
     @Provides
-    fun providesRetrofit(okHttpClient: OkHttpClient): Retrofit {
+    fun providesRetrofit(okHttpClient: OkHttpClient, @ApiUrl apiUrl: String): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(BuildConfig.BASE_URL)
+            .baseUrl(apiUrl)
             .client(okHttpClient)
             .addConverterFactory(MoshiConverterFactory.create())
             .build()

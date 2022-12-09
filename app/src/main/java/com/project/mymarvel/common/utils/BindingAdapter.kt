@@ -1,6 +1,7 @@
 package com.project.mymarvel.common.utils
 
 import androidx.appcompat.widget.AppCompatImageView
+import androidx.core.content.ContextCompat
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -13,7 +14,7 @@ import ru.tinkoff.scrollingpagerindicator.ScrollingPagerIndicator
 
 @BindingAdapter("loadImage")
 fun AppCompatImageView.loadImage(image: String) {
-    if(image.isNotEmpty()) {
+    if (image.isNotEmpty()) {
         val options = RequestOptions().centerCrop()
         Glide.with(context).load(image).apply(options).into(this)
     }
@@ -21,8 +22,8 @@ fun AppCompatImageView.loadImage(image: String) {
 
 @BindingAdapter("items")
 fun RecyclerView.setItems(items: List<MarvelItem>?) {
-    items?.let {
-        adapter = MarvelAdapter(items)
+    (adapter as? MarvelAdapter)?.let {
+        it.items = items?: emptyList()
     }
 }
 
@@ -32,5 +33,13 @@ fun RecyclerView.setEvents(items: List<EventItem>?, indicator: ScrollingPagerInd
         adapter = EventAdapter(items)
         indicator.attachToRecyclerView(this)
 
+    }
+}
+
+@BindingAdapter("convertDrawable")
+fun AppCompatImageView.convertDrawable(image: String) {
+    if (image.isNotEmpty()) {
+        val resId = resources.getIdentifier(image, "drawable", context.packageName)
+        setImageDrawable(ContextCompat.getDrawable(context, resId))
     }
 }

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    Drawer menu -->
+    <string name="menu_home">Inicio</string>
+    <string name="menu_comics">Comics</string>
+    <string name="menu_settings">Configuración</string>
+
+    <!--    Toolbar  -->
+    <string name="toolbar_detail">Detalle</string>
+    <string name="toolbar_network">Red</string>
+
+    <!--    Title screens -->
+    <string name="title_heroes">Héroes</string>
+    <string name="title_comics">Comics</string>
+    <string name="title_events">Eventos</string>
+
+    <!--    Errors  -->
+    <string name="error_connectivity">Error de conexión</string>
+    <string name="error_server">Error de servidor</string>
+    <string name="error_unknown">Error desconocido</string>
+
+    <!--    Settings  -->
+    <string name="choose_language">Elige tu idioma</string>
+    <string name="language_english">Inglés</string>
+    <string name="language_spanish">Español</string>
+
+    <!--    Detail  -->
+    <string name="title_description">Resumen</string>
+
+    <!--    Network  -->
+    <string name="internet_connection_title">Sin Conexión a Internet</string>
+    <string name="internet_connection_description">Intenta conectar tu dispostivo y volverás a la app automáticamente</string>
+</resources>

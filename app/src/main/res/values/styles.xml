@@ -1,3 +1,49 @@
 <resources>
+    <!-- Shapeable image theme. -->
+    <style name="RoundedCornersImageView" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
 
+    <!-- Title. -->
+    <style name="MainTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/marvelregular</item>
+        <item name="android:textColor">@color/primary_color</item>
+    </style>
+
+    <style name="SecondaryTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="fontFamily">@font/marvelregular</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/gray_600</item>
+        <item name="android:maxLines">2</item>
+    </style>
+
+    <style name="NetworkTitle" parent="Widget.AppCompat.TextView">
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">38sp</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/marvelregular</item>
+        <item name="android:textColor">@color/gray_600</item>
+    </style>
+
+    <!-- Item name. -->
+    <style name="ItemName" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center</item>
+        <item name="fontFamily">@font/marvelregular</item>
+        <item name="android:textColor">@color/gray_600</item>
+    </style>
+
+    <!-- Description. -->
+    <style name="Description" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/marvelregular</item>
+        <item name="android:textColor">@color/gray_600</item>
+        <item name="android:maxLines">5</item>
+        <item name="android:ellipsize">end</item>
+    </style>
 </resources>
