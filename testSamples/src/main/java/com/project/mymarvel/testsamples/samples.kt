@@ -1,8 +1,8 @@
 package com.project.mymarvel.testsamples
 
 import com.project.mymarvel.domain.Comic
-import com.project.mymarvel.domain.Hero
 import com.project.mymarvel.domain.Event
+import com.project.mymarvel.domain.Hero
 
 val sampleHero = Hero(
     0,
