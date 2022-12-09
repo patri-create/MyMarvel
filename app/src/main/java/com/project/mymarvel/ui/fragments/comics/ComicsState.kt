@@ -5,12 +5,11 @@ import androidx.navigation.NavController
 import com.project.mymarvel.R
 import com.project.mymarvel.domain.Error
 import com.project.mymarvel.domain.MarvelItem
-import com.project.mymarvel.ui.fragments.home.HomeFragmentDirections
 
 class ComicsState(private val context: Context, private val navController: NavController) {
 
     fun onItemClick(item: MarvelItem) {
-        val action = HomeFragmentDirections.actionHomeDestToDetailDest(item)
+        val action = ComicsFragmentDirections.actionComicsDestToDetailDest(item)
         navController.navigate(action)
     }
 
