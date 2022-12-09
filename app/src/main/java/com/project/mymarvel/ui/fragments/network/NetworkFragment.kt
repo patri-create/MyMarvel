@@ -1,14 +1,17 @@
 package com.project.mymarvel.ui.fragments.network
 
+import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
+import android.text.style.ForegroundColorSpan
 import android.text.style.StyleSpan
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.activity.OnBackPressedCallback
+import androidx.core.content.ContextCompat.getColor
 import androidx.fragment.app.Fragment
 import com.project.mymarvel.R
 import com.project.mymarvel.databinding.FragmentNetworkBinding
@@ -41,7 +44,8 @@ class NetworkFragment : Fragment() {
         val text = getString(R.string.internet_connection_title)
         val start = text.indexOf(text.split(" ").last())
         binding.title.text = SpannableString(getString(R.string.internet_connection_title)).apply {
-            setSpan( StyleSpan(Typeface.BOLD), start, text.length, Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
+            setSpan(StyleSpan(Typeface.BOLD), start, text.length, Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
+            setSpan(ForegroundColorSpan(getColor(requireContext(), R.color.primary_color)), start, text.length, Spannable.SPAN_EXCLUSIVE_INCLUSIVE)
         }
     }
 

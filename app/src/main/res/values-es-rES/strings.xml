@@ -9,6 +9,11 @@
     <string name="toolbar_detail">Detalle</string>
     <string name="toolbar_network">Red</string>
 
+    <!--    Title screens -->
+    <string name="title_heroes">Héroes</string>
+    <string name="title_comics">Comics</string>
+    <string name="title_events">Eventos</string>
+
     <!--    Errors  -->
     <string name="error_connectivity">Error de conexión</string>
     <string name="error_server">Error de servidor</string>
@@ -18,6 +23,9 @@
     <string name="choose_language">Elige tu idioma</string>
     <string name="language_english">Inglés</string>
     <string name="language_spanish">Español</string>
+
+    <!--    Detail  -->
+    <string name="title_description">Resumen</string>
 
     <!--    Network  -->
     <string name="internet_connection_title">Sin Conexión a Internet</string>
