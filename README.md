@@ -10,7 +10,6 @@
   <p align="center">
     Android app based on Modern Android Application tech-stacks, Clean Architecture and Google guides
     <br />
-    <a href="https://github.com/patri-create/MyMarvel/raw/main/MyMarvel-debug.apk"><strong>» Download «</strong></a>
 </div>
 
 
