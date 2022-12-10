@@ -18,7 +18,6 @@ interface ApiService {
     @GET("/v1/public/comics")
     suspend fun getComics(): ComicDataWrapper
 
-
     @GET("/v1/public/comics/{comicId}/events")
     suspend fun getEventsByComicId(@Path("comicId") comicId: Int): EventDataWrapper
 

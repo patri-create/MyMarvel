@@ -39,11 +39,17 @@
     </style>
 
     <!-- Description. -->
-    <style name="Description" parent="Widget.AppCompat.TextView">
+    <style name="EventDescription" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">14sp</item>
         <item name="fontFamily">@font/marvelregular</item>
         <item name="android:textColor">@color/gray_600</item>
         <item name="android:maxLines">5</item>
         <item name="android:ellipsize">end</item>
+    </style>
+
+    <style name="DetailDescription" parent="Widget.AppCompat.TextView">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/marvelregular</item>
+        <item name="android:textColor">@color/gray_600</item>
     </style>
 </resources>
