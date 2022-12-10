@@ -67,7 +67,7 @@
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/description_text"
-                style="@style/Description"
+                style="@style/DetailDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@{item.description}"

@@ -13,7 +13,7 @@ class MainState(private val activity: MainActivity, private val navController: N
             }
             false -> {
                 navController.navigate(R.id.network_dest)
-               activity.supportActionBar?.setDisplayHomeAsUpEnabled(false)
+                activity.supportActionBar?.setDisplayHomeAsUpEnabled(false)
                 activity.supportActionBar?.setHomeButtonEnabled(false)
             }
         }
