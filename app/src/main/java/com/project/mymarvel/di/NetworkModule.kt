@@ -47,7 +47,7 @@ object NetworkModule {
             .connectTimeout(60, TimeUnit.SECONDS)
             .writeTimeout(60, TimeUnit.SECONDS)
             .readTimeout(60, TimeUnit.SECONDS)
-            .hostnameVerifier(org.apache.http.conn.ssl.SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER)
+            .hostnameVerifier(hostnameVerifier = { _, _ -> true })
             .build()
 
     @Provides
