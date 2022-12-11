@@ -3,7 +3,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/patri-create/MyMarvel/blob/main/previews/logo.png">
-    <img src="previews/logo.png" alt="Logo" width="100" height="100">
+    <img src="previews/logo.png" alt="Logo" width="120" height="120">
   </a>
 
 <h3 align="center">My Marvel</h3>
@@ -13,7 +13,11 @@
     <br />
 </div>
 
+<div align="center">
 
+   [![Marvel-apk][Marvel-apk]][Marvel-apk-url]
+
+</div>
 
 <!-- TABLE OF CONTENTS -->
 <details>
@@ -108,6 +112,8 @@ Patricia Tarazaga - [LinkedIn](https://www.linkedin.com/in/patricia-tarazaga/)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
+[Marvel-apk]: https://img.shields.io/badge/Marvel_App-APK-silver.svg?style=for-the-badge&logo=android
+[Marvel-apk-url]: https://github.com/patri-create/MyMarvel/releases
 [Kotlin]: https://img.shields.io/badge/Kotlin-black?style=for-the-badge&logo=kotlin
 [Kotlin-url]: https://kotlinlang.org/
 [Jetpack-compose]: https://img.shields.io/badge/Jetpack%20Compose-blue?style=for-the-badge&logo=jetpackcompose&logoColor=green

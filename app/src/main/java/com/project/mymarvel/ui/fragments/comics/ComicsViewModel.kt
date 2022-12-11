@@ -31,7 +31,9 @@ class ComicsViewModel @Inject constructor(
 
     fun loadMarvelItems() {
         viewModelScope.launch {
+            loading(true)
             findComicsUseCase().fold(::onError, ::onSuccess)
+            loading(false)
         }
     }
 
@@ -48,7 +50,9 @@ class ComicsViewModel @Inject constructor(
         items?.let { items ->
             val item = items[pos]
             viewModelScope.launch {
+                loading(true, isMarvel = false)
                 findEventsUseCase(item.id).fold(::onError, ::onEventSuccess)
+                loading(false, isMarvel = false)
             }
         }
     }
@@ -63,7 +67,16 @@ class ComicsViewModel @Inject constructor(
         }
     }
 
+    private fun loading(isLoading: Boolean, isMarvel: Boolean = true) {
+        when (isMarvel) {
+            true -> _state.value = _state.value.copy(loadingMarvel = isLoading)
+            false -> _state.value = _state.value.copy(loadingEvent = isLoading)
+        }
+    }
+
     data class UiState(
+        val loadingMarvel: Boolean = true,
+        val loadingEvent: Boolean = true,
         val items: List<MarvelItem>? = null,
         val events: List<EventItem>? = null,
         val error: Error? = null,

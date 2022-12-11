@@ -88,6 +88,11 @@ object Libs {
         const val dotsIndicator = "ru.tinkoff.scrollingpagerindicator:scrollingpagerindicator:$version"
     }
 
+    object Shimmer {
+        private const val version = "0.4.0"
+        const val shimmer = "com.facebook.shimmer:shimmer:$version"
+    }
+
     object OkHttp3 {
         private const val version = "4.9.3"
         const val loginInterceptor = "com.squareup.okhttp3:logging-interceptor:$version"

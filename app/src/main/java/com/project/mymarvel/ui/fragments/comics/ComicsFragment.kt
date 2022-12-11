@@ -53,6 +53,8 @@ class ComicsFragment : Fragment() {
 
     private fun observers() {
         viewLifecycleOwner.launchAndCollect(vm.state) { uiState ->
+            controlMarvelShimmer(uiState.loadingMarvel)
+            controlEventShimmer(uiState.loadingEvent)
             uiState.items?.let { binding.items = it }
             binding.events = uiState.events
             binding.error = uiState.error?.let(state::errorToString)
@@ -93,5 +95,25 @@ class ComicsFragment : Fragment() {
 
     private fun fromMenu() {
         vm.reload()
+    }
+
+    private fun controlMarvelShimmer(isLoading: Boolean) {
+        with(binding) {
+            loadingMarvel = isLoading
+            when (isLoading) {
+                true -> marvelShimmer.shimmerComponent.startShimmer()
+                false -> marvelShimmer.shimmerComponent.stopShimmer()
+            }
+        }
+    }
+
+    private fun controlEventShimmer(isLoading: Boolean) {
+        with(binding) {
+            loadingEvent = isLoading
+            when (isLoading) {
+                true -> eventShimmer.shimmerComponent.startShimmer()
+                false -> eventShimmer.shimmerComponent.stopShimmer()
+            }
+        }
     }
 }
