@@ -124,6 +124,9 @@ dependencies {
     /* Dots Indicator */
     implementation Libs.DotsIndicator.dotsIndicator
 
+    /* Shimmer */
+    implementation Libs.Shimmer.shimmer
+
     /* OkHttp3 */
     implementation Libs.OkHttp3.loginInterceptor
 

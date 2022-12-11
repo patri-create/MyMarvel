@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-
-        <variable
-            name="item"
-            type="com.project.mymarvel.domain.MarvelItem" />
-    </data>
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="250dp"
@@ -20,11 +12,10 @@
             android:id="@+id/image_view"
             android:layout_width="match_parent"
             android:layout_height="350dp"
+            android:background="#B3B3B3"
             android:scaleType="centerCrop"
             app:shapeAppearanceOverlay="@style/RoundedCornersImageView"
-            app:loadImage="@{item.image}"
-            app:strokeColor="@null"
-            tools:src="@drawable/image_spiderman_placeholder"/>
+            app:strokeColor="@null" />
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/title_text"
@@ -32,8 +23,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:text="@{item.name}"
-            tools:text="Spiderman" />
+            android:background="#B3B3B3" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
