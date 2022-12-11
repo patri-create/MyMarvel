@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-
-        <variable
-            name="item"
-            type="com.project.mymarvel.domain.EventItem" />
-    </data>
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="320dp"
@@ -24,41 +16,38 @@
                 android:id="@+id/image_view"
                 android:layout_width="120dp"
                 android:layout_height="match_parent"
+                android:background="#B3B3B3"
                 android:scaleType="centerCrop"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:loadImage="@{item.image}"
                 app:shapeAppearanceOverlay="@style/RoundedCornersImageView"
-                app:strokeColor="@null"
-                tools:src="@drawable/image_spiderman_placeholder" />
+                app:strokeColor="@null" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/title_text"
                 style="@style/SecondaryTitle"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="20dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="@{item.title}"
+                android:background="#B3B3B3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/image_view"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:text="Lorem ipsum dolor sit amet" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/description_text"
                 style="@style/EventDescription"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="100dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
-                android:text="@{item.description}"
+                android:background="#B3B3B3"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/image_view"
-                app:layout_constraintTop_toBottomOf="@+id/title_text"
-                tools:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi." />
+                app:layout_constraintTop_toBottomOf="@+id/title_text" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

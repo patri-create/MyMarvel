@@ -5,11 +5,21 @@
 
     <data>
 
+        <import type="android.view.View"/>
+
         <import type="java.util.List" />
 
         <import type="com.project.mymarvel.domain.MarvelItem" />
 
         <import type="com.project.mymarvel.domain.EventItem" />
+
+        <variable
+            name="loadingMarvel"
+            type="Boolean" />
+
+        <variable
+            name="loadingEvent"
+            type="Boolean" />
 
         <variable
             name="items"
@@ -50,24 +60,45 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:text="@string/title_comics"
-                    app:layout_constraintBottom_toTopOf="@+id/main_recycler"
+                    app:layout_constraintBottom_toTopOf="@+id/marvel_container"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/main_recycler"
+                <FrameLayout
+                    android:id="@+id/marvel_container"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:orientation="horizontal"
-                    app:items="@{items}"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintBottom_toTopOf="@+id/title_events"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/title"
-                    tools:listitem="@layout/item_marvel" />
+                    app:layout_constraintTop_toBottomOf="@+id/title">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/marvel_shimmer_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="@{loadingMarvel? View.VISIBLE : View.GONE}">
+
+                        <include
+                            android:id="@+id/marvel_shimmer"
+                            layout="@layout/layout_marvel_shimmer" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/main_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="@{loadingMarvel? View.GONE : View.VISIBLE}"
+                        app:items="@{items}"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_marvel" />
+                </FrameLayout>
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/title_events"
@@ -76,24 +107,43 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
                     android:text="@string/title_events"
-                    app:layout_constraintBottom_toTopOf="@+id/event_recycler"
+                    app:layout_constraintBottom_toTopOf="@+id/event_container"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/main_recycler" />
+                    app:layout_constraintTop_toBottomOf="@+id/marvel_container" />
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/event_recycler"
+                <FrameLayout
+                    android:id="@+id/event_container"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:orientation="horizontal"
-                    app:events="@{events}"
-                    app:indicator="@{indicator}"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/title_events"
-                    tools:listitem="@layout/item_event" />
+                    app:layout_constraintTop_toBottomOf="@+id/title_events">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/event_shimmer_container"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="@{loadingEvent? View.VISIBLE : View.GONE}">
+
+                        <include layout="@layout/layout_event_shimmer"
+                            android:id="@+id/event_shimmer"/>
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/event_recycler"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="@{loadingEvent? View.GONE : View.VISIBLE}"
+                        app:events="@{events}"
+                        app:indicator="@{indicator}"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/item_event"/>
+
+                </FrameLayout>
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
